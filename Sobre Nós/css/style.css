@@ -22,6 +22,24 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
+  position: relative;
+}
+
+/* Estilização da Logo no Canto Superior Esquerdo */
+.header-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: block;
+  object-fit: contain;
 }
 
 .container {
@@ -30,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-top: 60px; /* Espaçamento extra para não cobrir o conteúdo superior */
 }
 
 /* Layout Superior de Duas Colunas */
@@ -164,6 +183,21 @@ h2.title {
 
 /* Responsividade para Dispositivos Móveis */
 @media (max-width: 768px) {
+  .header-logo {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .logo-img {
+    width: 120px;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
   .top-section {
     grid-template-columns: 1fr;
     gap: 40px;

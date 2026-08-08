@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+    /* Cores */
+    --cor-fundo: #F7EDE3;
+    --cor-secundaria: #DECDBD;
+    --verde-jambu: #1B5E20;
+    --verde-escuro: #0E4612;
+    --terracota: #CDA280;
+    --texto-escuro: #3B2A20;
+
+    /* Fontes */
+    --fonte-texto: 'Open Sans', sans-serif;
+    --fonte-titulo: 'Jacques Francois', serif;
+
+    --espacamento: 20px;
+    --borda: 12px;
+    --tempo: 0.4s;
+    --deslocamento: -4px;
+    --sombra: 0px 8px 20px rgba(0, 0, 0, .10);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--texto-escuro);
+}
+
+a {
+    text-decoration: none;
+    color: var(--verde-escuro);
+}
+
+ul {
+    list-style: none;
+}
+
+.banner-texto h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--verde-jambu);
+    margin-bottom: 16px;
+}
+
+.banner-texto p {
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    color: var(--texto-escuro);
+    margin-bottom: 24px;
+    max-width: 450px;
+}
+
+.botao-banner {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--verde-jambu);
+    color: var(--cor-fundo);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    border-radius: var(--borda);
+    box-shadow: var(--sombra);
+    transition: all var(--tempo);
+}
+
+.botao-banner:hover {
+    background-color: var(--terracota);
+    color: var(--texto-escuro);
+    transform: translateY(var(--deslocamento));
+}

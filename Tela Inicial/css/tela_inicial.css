@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
+/* ===== VARIÁVEIS GLOBAIS ===== */
 :root {
     /* Cores */
     --cor-fundo: #F7EDE3;
@@ -9,6 +10,7 @@
     --verde-escuro: #0E4612;
     --terracota: #CDA280;
     --texto-escuro: #3B2A20;
+    --branco: #ffffff;
 
     /* Fontes */
     --fonte-texto: 'Open Sans', sans-serif;
@@ -31,6 +33,23 @@ body {
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     color: var(--texto-escuro);
+}
+
+/*CONTAINER PRINCIPAL*/
+.portal_container {
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: var(--espacamento);
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "header      header"
+        "categoria   banner"
+        "produtos    produtos"
+        "cadastrar   cadastrar"
+        "depoimentos depoimentos"
+        "beneficios  beneficios"
+        "footer      footer";
 }
 
 a {
@@ -98,12 +117,12 @@ ul {
 .logo-busca {
     display: flex;
     align-items: center;
-    gap: var(--espacamento);
+    gap: 50px;
     flex: 1;
 }
 
 .logo img {
-    height: 50px;
+    height: 95px;
 }
 
 .lista-conta {
@@ -115,15 +134,20 @@ ul {
 
 .lista-conta a {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     gap: 4px;
-    font-size: 14px;
+    font-size: 12px;
     transition: transform var(--tempo);
 }
 
 .lista-conta a:hover {
     color: var(--verde-jambu);
     transform: translateY(var(--deslocamento));
+}
+
+.lista-conta i {
+    font-size: 18px;
 }
 
 .lista-menu {
@@ -169,4 +193,143 @@ ul {
 
 .busca button:hover {
     background-color: var(--verde-escuro);
+}
+
+.categoria {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacamento);
+}
+
+.botao-categoria {
+    background-color: var(--verde-jambu);
+    color: var(--cor-fundo);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--borda);
+    cursor: pointer;
+    transition: all var(--tempo);
+}
+
+.botao-categoria:hover {
+    background-color: var(--terracota);
+    color: var(--texto-escuro);
+    transform: translateY(var(--deslocamento));
+}
+
+.lista-categorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: var(--espacamento);
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+    border-radius: var(--borda);
+    min-width: 200px;
+    z-index: 10;
+} 
+
+.categoria:hover .lista-categorias {
+    display: block;
+}
+
+.lista-categorias li a {
+    display: block;
+    color: var(--texto-escuro);
+    padding: 10px 16px;
+}
+
+.lista-categorias li a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacamento);
+}
+
+.produtos h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 28px;
+    color: var(--texto-escuro);
+    margin-bottom: var(--espacamento);
+}
+
+.produtos-conteudo {
+    display: flex;
+    gap: var(--espacamento);
+}
+
+.produtos-texto {
+    flex: 0 0 200px;
+}
+
+.produtos-texto p {
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    color: var(--texto-escuro);
+}
+
+.lista-produtos {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacamento);
+}
+
+.card-produto {
+    position: relative;
+    padding: var(--espacamento);
+    background-color: var(--branco);
+    border-radius: var(--borda);
+    box-shadow: var(--sombra);
+    transition: transform var(--tempo);
+}
+
+.card-produto:hover {
+    transform: translateY(var(--deslocamento));
+}
+
+.botao-favoritar {
+    position: absolute;
+    top: var(--espacamento);
+    right: var(--espacamento);
+    background:none;
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--borda);
+    margin-bottom: 12px;
+}
+
+.card-produto h3 {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--texto-escuro);
+    margin-bottom: 4px;
+}
+
+.card-produto .artesao,
+.card-produto .local {
+    font-size: 14px;
+    color: var(--terracota);
+}
+
+.card-produto .preco {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--verde-jambu);
+    margin-top: 8px;
 }

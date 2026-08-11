@@ -1,0 +1,609 @@
+/* ==========================================================================
+   FEIRINHA PAI D'ÉGUA - ESTILOS PROFISSIONAIS DA PÁGINA DE ARTESÃOS
+   ========================================================================== */
+
+/* --- VARIÁVEIS E PALETA DE CORES INSTITUCIONAIS --- */
+:root {
+    --color-green-primary: #1e5a32;     /* Verde floresta */
+    --color-green-dark: #123d20;        /* Verde escuro houver */
+    --color-terracotta: #b84a29;       /* Terracota do barro paraense */
+    --color-terracotta-dark: #8f3115;
+    --color-straw-bg: #f9f4ea;         /* Fundo bege palha suave */
+    --color-sand-card: #f0e6d6;        /* Fundo cartão areia */
+    --color-river-blue: #22668d;
+    
+    /* Neutros */
+    --color-text-dark: #222222;
+    --color-text-muted: #555555;
+    --color-border: #e2d5c5;
+    --color-white: #ffffff;
+    
+    /* Tipografia */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-handwriting: 'Caveat', cursive;
+    
+    /* Efeitos */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 8px 25px rgba(184, 74, 41, 0.08);
+    --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- RESET & BASES --- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-straw-bg);
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. CABEÇALHO / HEADER
+   ========================================================================== */
+.site-header {
+    background-color: var(--color-straw-bg);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+}
+
+.top-bar {
+    padding: 12px 0;
+}
+
+.top-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo Oficial */
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 62px;
+    width: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.brand-logo:hover .logo-img {
+    transform: scale(1.02);
+}
+
+/* Barra de Pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 480px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-border);
+    border-radius: 30px;
+    padding: 4px 6px 4px 18px;
+    transition: var(--transition);
+}
+
+.search-box:focus-within {
+    border-color: var(--color-green-primary);
+    box-shadow: 0 0 0 4px rgba(30, 90, 50, 0.1);
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--color-text-dark);
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.search-box button {
+    background-color: var(--color-green-primary);
+    border: none;
+    color: var(--color-white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.search-box button:hover {
+    background-color: var(--color-green-dark);
+    transform: scale(1.05);
+}
+
+/* Ações do Usuário */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-text-dark);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.action-btn i {
+    font-size: 1.25rem;
+    color: var(--color-green-primary);
+    transition: var(--transition);
+}
+
+.action-btn:hover {
+    color: var(--color-terracotta);
+}
+
+.action-btn:hover i {
+    color: var(--color-terracotta);
+    transform: translateY(-2px);
+}
+
+.cart-icon-wrapper {
+    position: relative;
+}
+
+.badge-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navegação Secundária */
+.nav-bar {
+    background-color: var(--color-sand-card);
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-categories {
+    background-color: var(--color-green-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 20px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-categories:hover {
+    background-color: var(--color-green-dark);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 25px;
+}
+
+.nav-links a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    padding: 12px 0;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--color-terracotta);
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-terracotta);
+    border-radius: 3px 3px 0 0;
+}
+
+/* BREADCRUMB */
+.breadcrumb-bar {
+    padding: 15px 0 5px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.breadcrumb a:hover {
+    color: var(--color-terracotta);
+}
+
+.breadcrumb .current {
+    font-weight: 600;
+    color: var(--color-terracotta);
+}
+
+/* ==========================================================================
+   2. TÍTULO DA PÁGINA DE ARTESÃOS
+   ========================================================================== */
+.main-content {
+    padding: 20px 0 60px;
+}
+
+.artisan-page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sub-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-terracotta);
+    font-weight: 700;
+}
+
+.artisan-page-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: var(--color-green-primary);
+    margin-top: 4px;
+}
+
+.artisan-page-header p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 8px auto 0;
+}
+
+.divider-line {
+    width: 70px;
+    height: 3px;
+    background-color: var(--color-terracotta);
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+/* ==========================================================================
+   3. GRID DE ARTESÃOS (DUAS COLUNAS DA PRIMEIRA IMAGEM)
+   ========================================================================== */
+.artisan-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.artisan-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.artisan-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+/* Enquadramento da Foto */
+.artisan-img-box {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    background-color: var(--color-sand-card);
+}
+
+.artisan-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.5s ease;
+}
+
+.artisan-card:hover .artisan-img-box img {
+    transform: scale(1.05);
+}
+
+.origin-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(30, 90, 50, 0.9);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+/* Corpo do Cartão e Tipografia dos Nomes */
+.artisan-card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    animation: aparecer 1.5s ease-in;
+}
+
+/* Estilização do Nome do Artesão inspirada na Tipografia da Foto Original */
+.artisan-title-styled {
+    font-family: var(--font-handwriting);
+    font-size: 2.2rem;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.artisan-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Botão de Ação do Artesão */
+.btn-artisan-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    align-self: flex-start;
+    color: var(--color-terracotta);
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid var(--color-terracotta);
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.btn-artisan-profile:hover {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+}
+
+/* ==========================================================================
+   4. RODAPÉ / FOOTER
+   ========================================================================== */
+.site-footer {
+    background-color: #142817;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0 0;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    border-radius: var(--radius-sm);
+    margin-bottom: 15px;
+}
+
+.brand-col p {
+    font-size: 0.88rem;
+    max-width: 340px;
+    line-height: 1.5;
+}
+
+.footer-col h4 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.links-col ul li {
+    margin-bottom: 8px;
+}
+
+.links-col a {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.links-col a:hover {
+    color: var(--color-terracotta);
+}
+
+.contact-col p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--color-terracotta);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    padding: 18px 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .artisan-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand-logo {
+        justify-content: center;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .user-actions {
+        justify-content: space-around;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .btn-categories {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        overflow-x: auto;
+        width: 100%;
+        padding: 10px 0;
+        justify-content: flex-start;
+    }
+
+    .artisan-img-box {
+        height: 250px;
+    }
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

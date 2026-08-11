@@ -1,0 +1,321 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family:var(--fonte-texto);
+}
+
+/* ===========================
+   FONTE E BODY
+=========================== */
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #F8F4EC;
+}
+
+/* ===========================
+   CATEGORIAS
+=========================== */
+.categorias{
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin: 40px 0;
+}
+
+.categoria{
+padding: 12px 22px;
+border: none;
+border-radius: 30px;
+background-color: #ffffff;
+cursor: pointer;
+transition: .3s;
+}
+
+.categoria:hover{
+background-color: #2E7D32;
+color: white;
+}
+
+.categoria.ativa{
+background-color: #2E7D32;
+color: white;
+}
+
+/* ===========================
+   CAREÇALHO PRODUTOS
+=========================== */
+.cabecalho-produtos{
+text-align: center;
+margin-bottom: 50px;
+}
+
+.subtitulo{
+display: block;
+font-size: 16px;
+color: #2e7d32;
+font-weight: bold;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.titulo-produtos{
+font-size: 42px;
+color: #2b2b2b;
+margin-bottom: 18px;
+}
+
+.titulo-produtos::after{
+content: "";
+display: block;
+width: 80px;
+height: 4px;
+background-color: #2e7d32;
+margin: 18px auto 0;
+border-radius: 10px;
+}
+
+.descricao-produtos{
+max-width: 700px;
+margin: 0 auto;
+color: #666;
+font-size: 18px;
+line-height: 1.6;
+}
+
+
+
+/* ===========================
+   CARD DO PRODUTO
+=========================== */
+.lista-produtos{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+margin: 40px auto 0;
+max-width: 1150px;
+}
+
+.container-produtos {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.card-produto{
+
+width: 100%;
+margin: 0 auto;
+background: #FFF;
+border-radius: 18px;
+overflow: hidden;
+box-shadow: 0 6px 18px rgba(0,0,0,.12);
+display: flex;
+flex-direction: column;
+transition: .3s;
+height: 100%;
+}
+
+.card-produto:hover{
+transform: translateY(-8px);
+box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+}
+
+.imagem-produto{
+position: relative;
+}
+
+.imagem-produto img{
+width: 100%;
+height: 220px;
+display: block;
+object-fit: cover;
+transition: .4s;
+}
+
+.card-produto:hover img{
+transform: scale(1.05);
+}
+
+.info-produto{
+padding: 16px;
+flex-grow: 1;
+}
+
+.nome-produto{
+font-size: 20px;
+font-weight: 700;
+color: #2d2d2d;
+margin-bottom: 10px;
+}
+
+.artesao{
+color: #666;
+font-size: 15px;
+margin-bottom: 12px;
+}
+
+.avaliacao{
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+.estrelas{
+color: #f4b400;
+letter-spacing: 2px;
+}
+
+.nota{
+font-size: 14px;
+color: #777;
+}
+
+.preco{
+font-size: 28px;
+font-weight: bold;
+color: #2e7d32;
+margin-bottom: 10px;
+}
+
+.btn-produto{
+display: block;
+text-decoration: none;
+background-color: #2e7d32;
+color: white;
+text-align: center;
+padding: 12px;
+font-weight: bold;
+transition: .3s;
+margin-top: auto;
+}
+
+.btn-produto:hover{
+background: #225c25;
+}
+
+.badge{
+position: absolute;
+top: 15px;
+left: 15px;
+background-color: #2e7d32;
+color: #fff;
+padding: 6px 12px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+z-index: 2;
+}
+
+.favorito{
+position: absolute;
+top: 15px;
+right: 15px;
+width: 40px;
+height: 40px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, .9);
+cursor: pointer;
+font-size: 20px;
+transition: .3s;
+z-index: 2;
+}
+
+.favorito:hover{
+background: #1f5e2e;
+color: white;
+transform: scale(1.1);
+}
+
+/* ===========================
+   FILTROS
+=========================== */
+.filtros{
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+margin-bottom: 50px;
+}
+
+.filtro{
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.filtro label{
+margin-bottom: 8px;
+font-size: 14px;
+font-weight: 600;
+color: #444;
+margin-left: 4px;
+}
+
+.filtro select{
+width: 220px;
+padding: 12px 16px;
+border: 1px solid #d6d6d6;
+border-radius: 12px;
+background: #fff;
+font-size: 15px;
+color: #333;
+cursor: pointer;
+transition: .25s;
+outline: none;
+}
+
+.filtro select:hover{
+border-color: #2e7d32;
+}
+
+.filtro select:focus{
+box-shadow: 0 0 0 4px rgba(46, 125, 50, .15);
+border-color: #2e7d32; 
+}
+
+/* ===========================
+   RODAPÉ DA SEÇÃO
+=========================== */
+.rodape-produtos{
+text-align: center;
+margin-top:70px;
+padding: 50px 20px;
+background-color: #ffffff;
+border-radius: 18px;
+}
+
+.rodape-produtos h3{
+font-size: 30px;
+color: #2d2d2d;
+margin-bottom: 15px;
+}
+
+.rodape-produtos p{
+max-width: 650px;
+margin: 0 auto 30px;
+color: #666;
+line-height: 1.7;
+}
+
+.btn-ver-mais{
+display: inline-block;
+text-decoration: none;
+background-color: #2e7d32;
+color: white;
+padding: 15px 35px;
+border-radius: 30px;
+transition: .3s;
+font-weight: bold;
+}
+
+.btn-ver-mais:hover{
+background-color: #225c25;
+}

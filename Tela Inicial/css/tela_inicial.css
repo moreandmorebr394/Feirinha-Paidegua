@@ -601,6 +601,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-left: 150;
+ 
 }
 
 .rodape-social-item {

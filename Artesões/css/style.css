@@ -1,35 +1,34 @@
 /* ==========================================================================
-   FEIRINHA PAI D'ÉGUA - ESTILOS PROFISSIONAIS REFORMULADOS
+   FEIRINHA PAI D'ÉGUA - ESTILOS PROFISSIONAIS DA PÁGINA DE ARTESÃOS
    ========================================================================== */
 
-/* --- VARIÁVEIS DO TEMA E PALETA DE CORES --- */
+/* --- VARIÁVEIS E PALETA DE CORES INSTITUCIONAIS --- */
 :root {
-    /* Cores Institucionais Extraídas da Identidade Visual */
-    --color-green-primary: #1e5a32;     /* Verde floresta paraense */
-    --color-green-dark: #123d20;        /* Verde profundo para hovers */
-    --color-terracotta: #b84a29;       /* Terracota do barro/cerâmica marajoara */
-    --color-terracotta-dark: #8f3115;  /* Terracota escuro */
-    --color-straw-bg: #f9f4ea;         /* Fundo bege palha refinado e suave */
-    --color-sand-card: #f0e6d6;        /* Fundo secundário em tom areia */
-    --color-river-blue: #22668d;       /* Azul dos rios para detalhes */
+    --color-green-primary: #1e5a32;     /* Verde floresta */
+    --color-green-dark: #123d20;        /* Verde escuro houver */
+    --color-terracotta: #b84a29;       /* Terracota do barro paraense */
+    --color-terracotta-dark: #8f3115;
+    --color-straw-bg: #f9f4ea;         /* Fundo bege palha suave */
+    --color-sand-card: #f0e6d6;        /* Fundo cartão areia */
+    --color-river-blue: #22668d;
     
     /* Neutros */
-    --color-text-dark: #222222;        /* Texto principal */
-    --color-text-muted: #555555;       /* Texto secundário */
-    --color-border: #e2d5c5;           /* Bordas suaves */
+    --color-text-dark: #222222;
+    --color-text-muted: #555555;
+    --color-border: #e2d5c5;
     --color-white: #ffffff;
     
     /* Tipografia */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-accent: 'Caveat', cursive;
+    --font-handwriting: 'Caveat', cursive;
     
     /* Efeitos */
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
-    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
-    --shadow-card: 0 8px 30px rgba(184, 74, 41, 0.08);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 8px 25px rgba(184, 74, 41, 0.08);
     --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -87,7 +86,6 @@ ul {
     box-shadow: 0 2px 15px rgba(0,0,0,0.03);
 }
 
-/* Top Bar */
 .top-bar {
     padding: 12px 0;
 }
@@ -99,7 +97,7 @@ ul {
     gap: 20px;
 }
 
-/* Logo */
+/* Logo Oficial */
 .brand-logo {
     display: flex;
     align-items: center;
@@ -284,62 +282,6 @@ ul {
     border-radius: 3px 3px 0 0;
 }
 
-/* ==========================================================================
-   2. HERO BANNER
-   ========================================================================== */
-.hero-banner {
-    padding: 20px 0 10px;
-}
-
-.banner-wrapper {
-    position: relative;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    height: 240px;
-    box-shadow: var(--shadow-soft);
-}
-
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.85);
-}
-
-.banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(18, 61, 32, 0.88) 0%, rgba(18, 61, 32, 0.3) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 40px;
-    color: var(--color-white);
-}
-
-.banner-tag {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #e3b88c;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.banner-overlay h1 {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.banner-overlay p {
-    font-size: 0.95rem;
-    max-width: 500px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
 /* BREADCRUMB */
 .breadcrumb-bar {
     padding: 15px 0 5px;
@@ -363,367 +305,150 @@ ul {
 }
 
 /* ==========================================================================
-   3. CONTEÚDO PRINCIPAL (PERFIL DO ARTESÃO)
+   2. TÍTULO DA PÁGINA DE ARTESÃOS
    ========================================================================== */
 .main-content {
     padding: 20px 0 60px;
 }
 
-.profile-grid {
+.artisan-page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sub-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-terracotta);
+    font-weight: 700;
+}
+
+.artisan-page-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: var(--color-green-primary);
+    margin-top: 4px;
+}
+
+.artisan-page-header p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 8px auto 0;
+}
+
+.divider-line {
+    width: 70px;
+    height: 3px;
+    background-color: var(--color-terracotta);
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+/* ==========================================================================
+   3. GRID DE ARTESÃOS (DUAS COLUNAS DA PRIMEIRA IMAGEM)
+   ========================================================================== */
+.artisan-showcase-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: start;
 }
 
-/* COLUNA ESQUERDA */
-.col-left {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.artisan-header {
-    border-bottom: 2px solid var(--color-border);
-    padding-bottom: 15px;
-}
-
-.artisan-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background-color: var(--color-green-primary);
-    color: var(--color-white);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.artisan-name {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--color-text-dark);
-    line-height: 1.1;
-    margin-bottom: 6px;
-}
-
-.artisan-location {
-    font-size: 0.9rem;
-    color: var(--color-terracotta);
-    font-weight: 500;
-}
-
-.artisan-portrait-card {
+.artisan-card {
     background-color: var(--color-white);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-card);
     border: 1px solid var(--color-border);
-}
-
-.artisan-portrait-card img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    object-position: center 20%;
-}
-
-.portrait-caption {
-    padding: 12px 18px;
-    background-color: var(--color-sand-card);
-    font-size: 0.82rem;
-    color: var(--color-text-muted);
-    font-style: italic;
-    border-top: 1px solid var(--color-border);
-}
-
-.bio-section {
-    background-color: var(--color-white);
-    padding: 28px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-border);
-}
-
-.section-heading {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    color: var(--color-green-primary);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 12px;
-}
-
-.icon-accent {
-    color: var(--color-terracotta);
-}
-
-.bio-body h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-terracotta);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.bio-body p {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    color: var(--color-text-dark);
-    margin-bottom: 14px;
-    text-align: left;
-}
-
-.badges-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed var(--color-border);
-}
-
-.badge-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-}
-
-.badge-item i {
-    font-size: 1.2rem;
-    color: var(--color-green-primary);
-}
-
-/* COLUNA DIREITA */
-.col-right {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.quote-card {
-    background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%);
-    color: var(--color-white);
-    padding: 32px;
-    border-radius: var(--radius-md);
-    position: relative;
-    box-shadow: 0 10px 25px rgba(184, 74, 41, 0.25);
-}
-
-.quote-icon {
-    font-size: 2.2rem;
-    opacity: 0.3;
-    margin-bottom: 10px;
-}
-
-.quote-text {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 1.35rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-.quote-author {
-    display: block;
-    font-family: var(--font-body);
-    font-style: normal;
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-/* GALERIA DAS OBRAS */
-.section-subheading h3 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    color: var(--color-green-primary);
-}
-
-.section-subheading p {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-bottom: 15px;
-}
-
-.artworks-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.artwork-card {
-    background-color: var(--color-white);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--color-border);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
-.artwork-card:hover {
+.artisan-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-.artwork-img-wrapper {
+/* Enquadramento da Foto */
+.artisan-img-box {
     position: relative;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
     background-color: var(--color-sand-card);
 }
 
-.artwork-img-wrapper img {
+.artisan-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 25%;
     transition: transform 0.5s ease;
 }
 
-.artwork-card:hover .artwork-img-wrapper img {
+.artisan-card:hover .artisan-img-box img {
     transform: scale(1.05);
 }
 
-.btn-quick-view {
+.origin-badge {
     position: absolute;
-    bottom: 15px;
+    top: 15px;
     right: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(30, 90, 50, 0.9);
     color: var(--color-white);
-    border: none;
-    padding: 8px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    cursor: pointer;
     backdrop-filter: blur(4px);
-    transition: var(--transition);
-    opacity: 0;
 }
 
-.artwork-card:hover .btn-quick-view {
-    opacity: 1;
-}
-
-.artwork-details {
-    padding: 20px;
-}
-
-.artwork-category {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-terracotta);
-    font-weight: 700;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.artwork-details h4 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: var(--color-text-dark);
-    margin-bottom: 6px;
-}
-
-.artwork-desc {
-    font-size: 0.88rem;
-    color: var(--color-text-muted);
-    margin-bottom: 16px;
-}
-
-.artwork-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 12px;
-    border-top: 1px solid var(--color-border);
-}
-
-.artwork-status {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--color-green-primary);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.btn-inquire {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--color-terracotta);
-    border: 1px solid var(--color-terracotta);
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: var(--transition);
-}
-
-.btn-inquire:hover {
-    background-color: var(--color-terracotta);
-    color: var(--color-white);
-}
-
-/* CARD CTA WHATSAPP */
-.artisan-cta-card {
-    background-color: var(--color-sand-card);
-    border: 2px dashed var(--color-terracotta);
+/* Corpo do Cartão e Tipografia dos Nomes */
+.artisan-card-body {
     padding: 25px;
-    border-radius: var(--radius-md);
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    flex: 1;
+    animation: aparecer 1.5s ease-in;
 }
 
-.cta-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
+/* Estilização do Nome do Artesão inspirada na Tipografia da Foto Original */
+.artisan-title-styled {
+    font-family: var(--font-handwriting);
+    font-size: 2.2rem;
     color: var(--color-text-dark);
-    margin-bottom: 4px;
+    line-height: 1.1;
+    margin-bottom: 12px;
 }
 
-.cta-content p {
-    font-size: 0.85rem;
+.artisan-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
     color: var(--color-text-muted);
+    margin-bottom: 20px;
+    flex: 1;
 }
 
-.btn-cta-whatsapp {
-    background-color: #25d366;
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 12px 24px;
-    border-radius: 30px;
+/* Botão de Ação do Artesão */
+.btn-artisan-profile {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    justify-content: center;
+    gap: 8px;
+    align-self: flex-start;
+    color: var(--color-terracotta);
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid var(--color-terracotta);
+    padding: 8px 18px;
+    border-radius: 20px;
     transition: var(--transition);
 }
 
-.btn-cta-whatsapp:hover {
-    background-color: #1ebc57;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+.btn-artisan-profile:hover {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
 }
 
 /* ==========================================================================
@@ -733,7 +458,7 @@ ul {
     background-color: #142817;
     color: rgba(255, 255, 255, 0.8);
     padding: 50px 0 0;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .footer-grid {
@@ -816,16 +541,12 @@ ul {
 }
 
 /* ==========================================================================
-   5. RESPONSIVIDADE
+   5. RESPONSIVIDADE (MOBILE & TABLET)
    ========================================================================== */
 @media (max-width: 992px) {
-    .profile-grid {
+    .artisan-showcase-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    
-    .search-box {
-        max-width: 320px;
+        gap: 30px;
     }
 
     .footer-grid {
@@ -869,20 +590,20 @@ ul {
         justify-content: flex-start;
     }
 
-    .banner-wrapper {
-        height: 180px;
+    .artisan-img-box {
+        height: 250px;
+    }
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
     }
 
-    .banner-overlay h1 {
-        font-size: 1.5rem;
-    }
-
-    .artisan-name {
-        font-size: 2.2rem;
-    }
-
-    .badges-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

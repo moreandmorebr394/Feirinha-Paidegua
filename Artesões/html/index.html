@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesãos - Feirinha Pai d'Égua</title>
+    <!-- Fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO PRINCIPAL DA FEIRINHA PAI D'ÉGUA -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-container">
+                <!-- LOGO PAI D'ÉGUA -->
+                <a href="#" class="brand-logo" aria-label="Feirinha Pai d'Égua - Página Inicial">
+                    <img src="/img/9068cf26d61d4daf2ab52fd0dee3a61eb067d5ed.jpg" alt="Logo Feirinha Pai d'Égua - O artesanato paraense na palma de sua mão" class="logo-img">
+                </a>
+
+                <!-- BARRA DE BUSCA -->
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar artesãos, peças, cidades..." aria-label="Buscar artesãos e produtos">
+                    <button type="button" aria-label="Pesquisar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- AÇÕES DO USUÁRIO -->
+                <div class="user-actions">
+                    <a href="#" class="action-btn">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Minha Conta</span>
+                    </a>
+                    <a href="#" class="action-btn">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="#" class="action-btn cart-btn">
+                        <div class="cart-icon-wrapper">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="badge-count">2</span>
+                        </div>
+                        <span>Sacola</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVEGAÇÃO SECUNDÁRIA -->
+        <nav class="nav-bar">
+            <div class="container nav-container">
+                <button class="btn-categories" type="button">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Categorias</span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#" class="active">Artesãos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREADCRUMB / GUIA DE NAVEGAÇÃO -->
+    <div class="breadcrumb-bar">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="#">Início</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="current">Mestres Artesãos</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL: VITRINE DE ARTESÃOS -->
+    <main class="main-content">
+        <div class="container">
+            
+            <header class="artisan-page-header">
+                <span class="sub-tag">Mãos que Moldam a Nossa História</span>
+                <h2>Nossos Mestres e Artesãos</h2>
+                <p>Conheça os talentos paraenses que transformam barro, madeira e palha em pura arte com identidade.</p>
+                <div class="divider-line"></div>
+            </header>
+
+            <!-- GRID EM 2 COLUNAS (MESMA ESTRUTURA DA PRIMEIRA IMAGEM) -->
+            <div class="artisan-showcase-grid">
+
+                <!-- 1. MARIA DAS DORES -->
+                <article class="artisan-card">
+                    <div class="artisan-img-box">
+                        <img src="/img/images3.jpg" alt="Maria Das Dores exibindo peça artesanal em folha de madeira em seu estande">
+                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Barcarena / PA</span>
+                    </div>
+                    <div class="artisan-card-body">
+                        <h3 class="artisan-title-styled">Maria Das Dores</h3>
+                        <p class="artisan-desc">
+                            Artesã de Barcarena, cria peças exclusivas de decoração combinando madeira entalhada, fibras regionais e bijuterias finas.
+                        </p>
+                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 2. FERNANDA SILVA -->
+                <article class="artisan-card">
+                    <div class="artisan-img-box">
+                        <img src="/img/images.jpg" alt="Fernanda Silva com remo ornamentado em homenagem ao Círio de Nazaré">
+                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Belém / PA</span>
+                    </div>
+                    <div class="artisan-card-body">
+                        <h3 class="artisan-title-styled">Fernanda Silva</h3>
+                        <p class="artisan-desc">
+                            Seu foco é a rica cultura ribeirinha, criando remos decorados e artigos de fé com ornamentos e mandalas inspirados no Círio de Nazaré.
+                        </p>
+                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 3. LINA DA CONCEIÇÃO -->
+                <article class="artisan-card">
+                    <div class="artisan-img-box">
+                        <img src="/img/images1.jpg" alt="Lina da Conceição segurando trançados artesanais em palha de Santarém">
+                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Santarém / PA</span>
+                    </div>
+                    <div class="artisan-card-body">
+                        <h3 class="artisan-title-styled">Lina da Conceição</h3>
+                        <p class="artisan-desc">
+                            Artesã de Santarém, desenvolve cestarias e fruteiras tecidas em palha natural, unindo utilidade com o resgate do design paraense.
+                        </p>
+                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 4. JOSÉ CARLOS -->
+                <article class="artisan-card">
+                    <div class="artisan-img-box">
+                        <img src="/img/doca.jpg" alt="José Carlos segurando vaso de cerâmica marajoara em seu ateliê">
+                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Soure, Marajó / PA</span>
+                    </div>
+                    <div class="artisan-card-body">
+                        <h3 class="artisan-title-styled">José Carlos</h3>
+                        <p class="artisan-desc">
+                            Mestre nos jarros do Marajó, modela peças únicas de cerâmica ancestral perfeitas para a ornamentação e elegância da sua casa.
+                        </p>
+                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ DA FEIRINHA PAI D'ÉGUA -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="../img/IMG-20260804-WA0009.jpg" alt="Logo Feirinha Pai d'Égua" class="footer-logo">
+                <p>Valorizando a arte, a cultura e a identidade paraense através das mãos dos nossos mestres artesãos.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Artesãos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Sobre a Feirinha</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Atendimento</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@feirinhapaidegua.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Belém & Soure — Pará, Brasil</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Feirinha Pai d'Égua. Todos os direitos reservados. Orgulhosamente produzido no Pará.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

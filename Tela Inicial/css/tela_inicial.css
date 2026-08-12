@@ -290,6 +290,11 @@ main {
     background-color: var(--cor-secundaria);
 }
 
+.lista-categorias i {
+    font-size: 10px;
+    margin-left: 65px;
+}
+
 .produtos {
     max-width: 1400px;
     margin: 0 auto;
@@ -317,6 +322,8 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--espacamento);
     text-align: left;
+    /*Aplicando Animação*/
+    animation: aparecer 1.5s ease-in;
 }
 
 .card-produto {
@@ -460,6 +467,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--espacamento);
     text-align: left;
+    animation: aparecer 1.5s ease-in;
 }
 
 .card-depoimento {
@@ -628,4 +636,32 @@ main {
     padding-top: var(--espacamento);
     max-width: 1400px;
     margin: var(--espacamento) auto 0 auto;
+}
+
+/*KEYFRAME*/
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*RESPOSIVIDADE*/
+
+@media (max-width: 700px) {
+    .produtos {
+        flex-direction: column;
+    }
+
+    .card-produto {
+        background-color: blue;
+    } 
+    
+
 }

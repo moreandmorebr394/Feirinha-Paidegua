@@ -152,12 +152,12 @@ main {
 .logo-busca {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 55px;
     flex: 1;
 }
 
 .logo img {
-    height: 95px;
+    height: 190px;
 }
 
 .lista-conta {
@@ -209,12 +209,12 @@ main {
 .busca {
     display: flex;
     flex: 1;
-    max-width: 700px;  
+    max-width: 750px;  
 }
 
 .busca input {
     flex: 1;
-    padding: 10px 16px;
+    padding: 15px 22px;
     border: 1px solid var(--cor-secundaria);
     border-radius: var(--borda) 0 0 var(--borda);
     font-family: var(--fonte-texto);
@@ -222,13 +222,14 @@ main {
 }
 
 .busca button {
-    padding: 10px 20px;
+    padding: 10px 16px;
     background-color: var(--verde-jambu);
     color: var(--cor-fundo);
     border: none;
     border-radius: 0 var(--borda) var(--borda) 0;
     cursor: pointer;
     transition: background-color var(--tempo);
+    font-size: 16px;
 }
 
 .busca button:hover {
@@ -293,38 +294,29 @@ main {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--espacamento);
+    text-align: center;
 }
 
 .produtos h2 {
     font-family: var(--fonte-titulo);
     font-size: 28px;
     color: var(--texto-escuro);
-    margin-bottom: var(--espacamento);
+    margin-bottom: 8px;
 }
 
-.produtos-conteudo {
-    display: flex;
-    align-items: center;
-    gap: var(--espacamento);
-}
-
-.produtos-texto {
-    flex: 0 0 200px;
-}
-
-.produtos-texto p {
+.produtos > p {
     font-family: var(--fonte-texto);
     font-size: 18px;
     font-weight: 600;
     color: var(--verde-jambu);
-    line-height: 1.5;
+    margin-bottom: var(--espacamento);
 }
 
 .lista-produtos {
-    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--espacamento);
+    text-align: left;
 }
 
 .card-produto {
@@ -414,8 +406,8 @@ main {
 
 .botao-cadastrar {
     display: inline-block;
-    padding: 14px 28px;
-    background-color: var(--verde-jambu);
+    padding: 16px 32px;
+    background-color: var(--verde-escuro);
     color: var(--cor-fundo);
     font-family: var(--fonte-texto);
     font-weight: 600;
@@ -425,8 +417,8 @@ main {
 }
 
 .botao-cadastrar:hover {
-    background-color: var(--terracota);
-    color: var(--texto-escuro);
+    background-color: var(--verde-jambu);
+    color: var(--cor-fundo);
     transform: translateY(var(--deslocamento));
     box-shadow: var(--sombra);
 }
@@ -457,8 +449,9 @@ main {
 
 .depoimentos > p {
     font-family: var(--fonte-texto);
-    font-size: 16px;
-    color: var(--verde-escuro);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--verde-jambu);
     margin-bottom: var(--espacamento);
 }
 
@@ -568,7 +561,8 @@ main {
 
 .rodape-conteudo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
     gap: var(--espacamento);
     max-width: 1400px;
     margin: 0 auto;

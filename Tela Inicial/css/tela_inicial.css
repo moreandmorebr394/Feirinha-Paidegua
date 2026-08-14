@@ -662,13 +662,48 @@ main {
 /*RESPOSIVIDADE*/
 
 @media (max-width: 700px) {
-    .produtos {
+
+    /* Topo: categoria + banner empilham */
+
+    .topo-banner {
         flex-direction: column;
     }
 
-    .card-produto {
-        background-color: blue;
-    } 
-    
+    .categoria {
+        flex: 1;
+        width: 100%;
+    }
 
+    /* Produtos em destaque: 3 colunas → 1 */
+    .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cadastre sua loja: texto + imagem empilham */
+    .cadastrar-vendedor {
+        flex-direction: column;
+    }
+
+    /* Depoimentos: 4 colunas → 1 */
+    .lista-depoimentos {
+        grid-template-columns: 1fr;
+    }
+
+     /* Benefícios: 4 colunas → 1 */
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    /* Rodapé: colunas lado a lado → empilhadas */
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        justify-content: start;
+        text-align: center;
+    }
+
+     .rodape-social {
+        align-items: center;
+    }
+   
 }
+

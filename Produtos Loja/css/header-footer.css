@@ -36,6 +36,11 @@ ul {
     padding: 0;
 }
 
+.site-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* =========================================
    HEADER + NAVEGAÇÃO
    ========================================= */
@@ -70,20 +75,20 @@ ul {
 .busca {
     display: flex;
     flex: 1;
-    max-width: 600px;
+    max-width: 750px;
 }
 
 .busca input {
     width: 100%;
-    padding: 12px 16px;
+    padding: 14px 16px;
     border: 1px solid var(--terracota);
     border-radius: var(--borda) 0 0 var(--borda);
     font-family: var(--fonte-texto);
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .busca button {
-    padding: 12px 18px;
+    padding: 14px 20px;
     border: none;
     background-color: var(--verde-jambu);
     color: var(--cor-fundo);
@@ -104,15 +109,19 @@ ul {
 
 .lista-conta a {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    color: var(--texto-escuro);
+    color: var(--verde-jambu);
     font-family: var(--fonte-texto);
     font-size: 14px;
 }
 
 .lista-conta i {
-    font-size: 20px;
+    font-size: 24px;
+    color: var(--verde-jambu);
+    display: inline-block;
 }
 
 
@@ -124,11 +133,12 @@ ul {
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 75px;
+    min-height: 85px;
     /* justify-content: space-between; */
     /* gap: 40px; */
     background-color: var(--cor-secundaria);
-    padding: 6px 20px;
+    padding: 10px 20px;
+    border-radius: var(--borda);
 }
 
 /* .nav-menu a {

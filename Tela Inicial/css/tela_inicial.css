@@ -153,12 +153,12 @@ main {
 .logo-busca {
     display: flex;
     align-items: center;
-    gap: 55px;
+    gap: var(--espacamento);
     flex: 1;
 }
 
 .logo img {
-    height: 190px;
+    max-height: 190px;
 }
 
 .lista-conta {
@@ -180,7 +180,7 @@ main {
 .lista-conta a:hover {
     color: var(--verde-jambu);
     transform: translateY(var(--deslocamento));
-    box-shadow: var(--sombra-intensa);
+    box-shadow: var(--sombra);
 }
 
 .lista-conta i {
@@ -204,7 +204,7 @@ main {
 .lista-menu a:hover {
     transform: translateY(var(--deslocamento));
     color: var(--verde-jambu);
-    box-shadow: var(--sombra-intensa);
+    box-shadow: var(--sombra);
 }
 
 .busca {
@@ -610,7 +610,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-left: 150;
+    margin-left: 150px;
  
 }
 
@@ -661,19 +661,9 @@ main {
 
 /*RESPOSIVIDADE*/
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
-    /* Topo: categoria + banner empilham */
-
-    .topo-banner {
-        flex-direction: column;
-    }
-
-    .categoria {
-        flex: 1;
-        width: 100%;
-    }
-
+    
     /* Produtos em destaque: 3 colunas → 1 */
     .lista-produtos {
         grid-template-columns: 1fr;
@@ -704,6 +694,40 @@ main {
      .rodape-social {
         align-items: center;
     }
-   
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .lista-produtos { grid-template-columns: repeat(2, 1fr); }
+  .lista-depoimentos { grid-template-columns: repeat(2, 1fr); }
+  .beneficios { grid-template-columns: repeat(2, 1fr); }
+  .rodape-conteudo { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile grande */
+@media (max-width: 768px) {
+  .logo img { height: 120px; }
+  .lista-menu { gap: 16px; font-size: 16px; }
+  .banner-texto h1 { font-size: 32px; }
+  .busca { max-width: 100%; }
+  .topo { flex-direction: column; align-items: stretch; }
+  .logo-busca { flex-direction: column; gap: var(--espacamento); }
+  .busca { max-width: none; width: 100%; }
+  .nav-menu { flex-wrap: wrap; }
+  .categoria { order: -1; width: 100%; }
+  
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .lista-produtos { grid-template-columns: 1fr; }
+  .lista-depoimentos { grid-template-columns: 1fr; }
+  .beneficios { grid-template-columns: 1fr; }
+  .rodape-conteudo { grid-template-columns: 1fr; }
+  .banner { min-height: auto; padding: var(--espacamento); }
+  .banner-texto h1 { font-size: 24px; }
+  .topo { flex-wrap: wrap; }
+  .logo-busca { width: 100%; order: -1; }
+  .menu-conta { width: 100%; }
 }
 

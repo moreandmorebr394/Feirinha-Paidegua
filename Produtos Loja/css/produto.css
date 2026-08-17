@@ -5,6 +5,34 @@ padding: 0;
 font-family:var(--fonte-texto);
 }
 
+body {
+background-color: #F7EDE3;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.produto {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-container {
+    width: calc(100% - 140px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .site-container {
+        width: 100%;
+    }
+}
+
 .pagina-produto{
     max-width:1200px;
     margin:0 auto;

@@ -222,7 +222,7 @@ ul {
 
 /* Navegação Secundária */
 .nav-bar {
-    background-color: #ded0c3; /* Tom bege/caqui da referência */
+    background-color: var(--color-beige); /* Tom bege/caqui da referência */
     padding: 12px 0;
     border-top: none;
     border-bottom: none;
@@ -240,15 +240,15 @@ ul {
 
 /* Barra de Navegação */
 .nav-bar {
-    background-color: #ded0c3; /* Tom bege da referência da foto */
+    background-color: var(--color-border); /* Tom bege da referência da foto */
     padding: 12px 0;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
     position: relative;
 }
 
@@ -263,8 +263,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #093711; /* Verde escuro exato */
-    color: #ffffff;
+    background-color: var(--color-green-dark); /* Verde escuro exato */
+    color: var(--color-white);
     border: none;
     padding: 8px 22px;
     font-size: 0.98rem;
@@ -286,7 +286,7 @@ ul {
     top: 100%;
     left: 0;
     min-width: 260px;
-    background-color: #f8efe4; /* Tom creme/palha interno */
+    background-color: var(--color-cream); /* Tom creme/palha interno */
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     list-style: none;
@@ -306,7 +306,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: #2b2b2b;
+    color: var(--color-text);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -315,7 +315,7 @@ ul {
 
 .lista-categorias li a:hover {
     background-color: rgba(9, 55, 17, 0.08);
-    color: #093711;
+    color: var(--color-green-dark);
 }
 
 .lista-categorias li a span {
@@ -368,7 +368,7 @@ ul {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     margin-left: auto; /* Posiciona os links ao centro/direita */
     margin-right: 15%;
     list-style: none;
@@ -377,7 +377,7 @@ ul {
 .nav-links a {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #125325; /* Texto verde escuro idêntico ao da imagem */
+    color: var(--color-green-primary); /* Texto verde escuro idêntico ao da imagem */
     padding: 6px 0;
     display: inline-block;
     text-decoration: none;
@@ -387,7 +387,7 @@ ul {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #0b3a17;
+    color: var(--color-green-dark);
     opacity: 0.85;
 }
 
@@ -432,7 +432,7 @@ ul {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #e3b88c;
+    color: var(--color-terracotta);
     font-weight: 600;
     margin-bottom: 6px;
 }
@@ -775,7 +775,7 @@ ul {
    5. RODAPÉ / FOOTER
    ========================================================================== */
 .site-footer {
-    background-color: #142817;
+    background-color: var(--color-green-dark);
     color: rgba(255, 255, 255, 0.8);
     padding: 50px 0 0;
     margin-top: 50px;
@@ -879,6 +879,7 @@ ul {
     .top-bar-container {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
     }
 
     .brand-logo {
@@ -891,10 +892,13 @@ ul {
 
     .user-actions {
         justify-content: space-around;
+        width: 100%;
     }
 
     .nav-container {
         flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
     }
 
     .btn-categories {
@@ -903,13 +907,27 @@ ul {
     }
 
     .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
         margin-left: 0;
         overflow-x: auto;
         width: 100%;
+        gap: 18px;
         padding: 10px 0;
         justify-content: flex-start;
     }
 
+    .lista-categorias {
+        width: 100%;
+        position: static;
+        box-shadow: none;
+        margin-top: 6px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
     .banner-wrapper {
         height: 180px;
     }

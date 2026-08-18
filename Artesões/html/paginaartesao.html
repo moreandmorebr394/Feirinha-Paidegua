@@ -53,12 +53,28 @@
         </div>
 
         <!-- NAVEGAÇÃO SECUNDÁRIA -->
-<nav class="nav-bar">
-    <div class="container nav-container">
-        <button class="btn-categories" type="button">
-            <i class="fa-solid fa-bars"></i>
-            <span>Categorias</span>
-        </button>
+        <nav class="nav-bar">
+            <div class="container nav-container">
+                
+                <!-- MENU DROPDOWN CATEGORIAS -->
+                <div class="dropdown-categorias">
+                    <button class="btn-categories" type="button" aria-expanded="false" aria-controls="menu-categorias">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Categorias</span>
+                    </button>
+
+                    <ul class="lista-categorias" id="menu-categorias">
+                        <li><a href="#">Novidades <span>&gt;</span></a></li>
+                        <li><a href="#">Cerâmica Marajoara <span>&gt;</span></a></li>
+                        <li><a href="#">Cestaria <span>&gt;</span></a></li>
+                        <li><a href="#">Arte em Miriti <span>&gt;</span></a></li>
+                        <li><a href="#">Biojoias <span>&gt;</span></a></li>
+                        <li><a href="#">Escultura em Madeira <span>&gt;</span></a></li>
+                        <li><a href="#">Tecidos e Bordados <span>&gt;</span></a></li>
+                        <li><a href="#">Decoração <span>&gt;</span></a></li>
+                        <li><a href="#">Acessórios <span>&gt;</span></a></li>
+                    </ul>
+                </div>
         <ul class="nav-links">
             <li><a href="#">Início</a></li>
             <li><a href="#">Produtos</a></li>

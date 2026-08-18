@@ -61,10 +61,12 @@ ul {
     border-radius: var(--borda);
     padding: calc(var(--espacamento) * 2);
     min-height: 420px;
+    justify-items: center;
 }
 
 .banner-texto {
     flex: 1;
+    justify-items: center;
 }
 
 .banner-img {
@@ -91,10 +93,15 @@ ul {
     color: var(--texto-escuro);
     margin-bottom: 24px;
     max-width: 450px;
+    justify-items: center;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
 }
 
 .botao-banner {
-    display: inline-block;
     padding: 14px 28px;
     background-color: var(--verde-escuro);
     color: var(--cor-fundo);
@@ -147,7 +154,7 @@ main {
 .topo {
     display: flex;
     align-items: center;
-    gap: var(--espacamento);
+    gap: 30px;
 }
 
 .logo-busca {
@@ -218,8 +225,8 @@ main {
 .lista-menu {
     flex: 1;
     display: flex;
-    gap: 28px;
-    justify-content: center;
+    gap: var(--espacamento);
+    justify-content: space-evenly
 }
 
 .lista-menu a {
@@ -238,7 +245,7 @@ main {
 .busca {
     display: flex;
     flex: 1;
-    max-width: 580px;  
+    max-width: 550px;  
 }
 
 .busca input {
@@ -704,7 +711,7 @@ main {
 /* Mobile grande - até 768px */
 @media (max-width: 768px) {
     .logo img { 
-        height: 55px;
+        height: 85px;
         width: auto;
         max-width: 130px;
     }
@@ -728,7 +735,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 12px;
     }
 
@@ -798,6 +805,5 @@ main {
     .banner { min-height: auto; padding: var(--espacamento); }
     .banner-texto h1 { font-size: 24px; }
     .topo { flex-wrap: wrap; }
-    .menu-conta { width: 100%; }
 }
 

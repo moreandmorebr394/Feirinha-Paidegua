@@ -1,0 +1,468 @@
+/* ==========================================================
+   1. CONFIGURAÇÕES DA PÁGINA
+   ========================================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #E6D3CB;                       /* Fundo rosa/terroso da página */
+  color: #333333;
+  margin: 0;
+  padding: 15px;
+  padding-bottom: 90px;                             /* Espaço pra barra fixa inferior não cobrir conteúdo */
+}
+
+/* ==========================================================
+   2. CONTAINER PRINCIPAL
+   ========================================================== */
+.checkout-container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FBF4EA;                       /* Cream de fundo dos blocos */
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Faixa bege fina que separa os blocos */
+.divisor {
+  max-width: 480px;
+  width: 100%;
+  height: 10px;
+  background-color: #E9D9BF;
+  margin: 0 auto;
+}
+
+/* Blocos de conteúdo */
+.bloco {
+  padding: 16px 18px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #333333;
+}
+
+/* ==========================================================
+   3. LINHAS COM ÍCONE (cliente, CPF, loja)
+   ========================================================== */
+.linha-icone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linha-icone .material-symbols-outlined {
+  font-size: 20px;
+  color: #333333;
+  flex-shrink: 0;
+}
+
+.cliente-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.cliente-principal strong {
+  font-weight: 700;
+}
+
+.telefone {
+  color: #333333;
+}
+
+.seta {
+  margin-left: auto;
+  color: #B8ABA0 !important;
+}
+
+.endereco-detalhe {
+  margin: 8px 0 12px 30px;
+  font-size: 12.5px;
+  color: #6B6058;
+  line-height: 1.5;
+}
+
+.endereco-detalhe p {
+  margin: 0;
+}
+
+.cpf-row {
+  font-size: 13px;
+  padding-top: 10px;
+  border-top: 1px solid #EDE1D2;
+}
+
+.cpf-valor {
+  margin-left: auto;
+  font-size: 12.5px;
+  color: #6B6058;
+}
+
+/* ==========================================================
+   4. PRODUTOS
+   ========================================================== */
+.loja-header {
+  margin-bottom: 14px;
+}
+
+.loja-header strong {
+  font-size: 14px;
+}
+
+.item-produto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.check-item {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #D94336;
+}
+
+.foto-produto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #EFE4D4;
+}
+
+.foto-produto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-produto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.nome-produto {
+  font-size: 13.5px;
+  color: #333333;
+}
+
+.preco-produto {
+  color: #D94336;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.qtd-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-qtd {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: #EFE4D4;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.qtd-valor {
+  font-size: 13px;
+  min-width: 10px;
+  text-align: center;
+}
+
+/* Cupom / mensagem para o vendedor */
+.linha-opcao {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #EDE1D2;
+  gap: 6px;
+}
+
+.linha-opcao label {
+  font-size: 13px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.linha-opcao input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  text-align: right;
+  font-size: 12.5px;
+  color: #B8ABA0;
+  padding: 0;
+}
+
+.linha-opcao input[type="text"]::placeholder {
+  color: #B8ABA0;
+}
+
+.linha-opcao input[type="text"]:focus {
+  outline: none;
+}
+
+/* Entrega padrão (faixa verde) GRATIS */
+.entrega-padrao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #E1EFD9;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.entrega-padrao strong {
+  font-size: 13px;
+}
+
+.entrega-padrao p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #6B6058;
+}
+
+.gratis {
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.linha-total-itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.preco-destaque {
+  color: #D94336;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   5. MÉTODO DE PAGAMENTO
+   ========================================================== */
+.titulo-pagamento {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titulo-pagamento h2 {
+  margin: 0;
+}
+
+.icone-seguro {
+  font-size: 18px;
+  color: #2E7D32;
+}
+
+.opcao-pagamento {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #EDE1D2;
+  cursor: pointer;
+}
+
+.opcao-pagamento input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #333333;
+  flex-shrink: 0;
+}
+
+.icone-metodo {
+  font-size: 20px;
+}
+
+.icone-metodo.pix {
+  color: #2E7D32;
+}
+
+.icone-metodo.cartao {
+  color: #333333;
+}
+
+.icone-metodo.paypal {
+  color: #2E7D32;
+}
+
+.texto-metodo {
+  font-size: 13.5px;
+  flex-grow: 1;
+}
+
+/* ==========================================================
+   6. RESUMO / DETALHES DE PAGAMENTO
+   ========================================================== */
+.linha-resumo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 13px;
+}
+
+.linha-resumo.total-final {
+  border-top: 1px solid #EDE1D2;
+  margin-top: 6px;
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   7. BARRA FIXA INFERIOR
+   ========================================================== */
+.footer-fixo {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FBF4EA;
+  padding: 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+.total-footer {
+  color: #D94336;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.btn-fazer-pedido {
+  background-color: #D94336;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 120px;
+}
+
+.btn-fazer-pedido:hover {
+  background-color: #B83327;
+}
+
+/* ==========================================================
+   8. PÁGINA "SACOLA" (lista de produtos)
+   ========================================================== */
+.header-sacola {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #EDE1D2;
+}
+
+.header-sacola .material-symbols-outlined {
+  font-size: 22px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.header-sacola h1 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  text-align: left;
+}
+
+.contagem {
+  font-weight: 400;
+  color: #6B6058;
+}
+
+.link-editar {
+  font-size: 13px;
+  color: #D94336;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lista-produtos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.linha-produto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+}
+
+.linha-produto:nth-child(even) {
+  background-color: #F3E9DA;
+}
+
+.linha-produto:nth-child(odd) {
+  background-color: #FBF4EA;
+}
+
+.bloco-cupom {
+  padding: 16px 18px;
+  border-top: 1px solid #EDE1D2;
+}
+
+.bloco-cupom label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.msg-desconto {
+  font-size: 12px;
+  color: #6B6058;
+  margin: 8px 0 0 0;
+}
+
+.footer-final {
+  padding: 16px 18px;
+}
+
+.footer-final .linha-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

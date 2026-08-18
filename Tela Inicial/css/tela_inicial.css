@@ -161,6 +161,34 @@ main {
     max-height: 190px;
 }
 
+.cep {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    background-color: var(--branco);
+    border: 1px solid var(--cor-secundaria);
+    border-radius: var(--borda);
+    white-space: nowrap;
+}
+
+.cep i {
+    color: var(--verde-jambu);
+    font-size: 16px;
+}
+
+.cep input {
+    border: none;
+    outline: none;
+    font-family: var(--fonte-texto);
+    font-size: 13px;
+    color: var(--texto-escuro);
+    justify-content: flex-start;
+    background: transparent;
+}
+
+
 .lista-conta {
     display: flex;
     gap: var(--espacamento);
@@ -210,7 +238,7 @@ main {
 .busca {
     display: flex;
     flex: 1;
-    max-width: 750px;  
+    max-width: 580px;  
 }
 
 .busca input {
@@ -626,6 +654,7 @@ main {
 
 .rodape-social-item i {
     font-size: 20px;
+   line-height: 1;
 }
 
 .rodape-social-item:hover {
@@ -661,73 +690,114 @@ main {
 
 /*RESPOSIVIDADE*/
 
+/* Tablet - até 1024px */
+@media (max-width: 1024px) {
+    .lista-produtos { grid-template-columns: repeat(2, 1fr); }
+
+    .lista-depoimentos { grid-template-columns: repeat(2, 1fr); }
+
+    .beneficios { grid-template-columns: repeat(2, 1fr); }
+
+    .rodape-conteudo { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile grande - até 768px */
 @media (max-width: 768px) {
-
-    
-    /* Produtos em destaque: 3 colunas → 1 */
-    .lista-produtos {
-        grid-template-columns: 1fr;
+    .logo img { 
+        height: 55px;
+        width: auto;
+        max-width: 130px;
     }
 
-    /* Cadastre sua loja: texto + imagem empilham */
-    .cadastrar-vendedor {
-        flex-direction: column;
+    .lista-menu { 
+        gap: 14px; 
+        font-size: 16px; 
+        flex-wrap: wrap; 
+        justify-content: center;
     }
 
-    /* Depoimentos: 4 colunas → 1 */
-    .lista-depoimentos {
-        grid-template-columns: 1fr;
+    .lista-menu a {
+         white-space: nowrap; 
     }
 
-     /* Benefícios: 4 colunas → 1 */
-    .beneficios {
-        grid-template-columns: 1fr;
+    .banner-texto h1 { 
+        font-size: 32px;
     }
 
-    /* Rodapé: colunas lado a lado → empilhadas */
+    .topo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .logo-busca {
+        display: contents;
+    }
+
+    .logo {
+        order: 1;
+        margin-right: 0;
+    }
+
+    .menu-conta {
+        order: 2;
+        flex: 0 1 auto;
+        width: fit-content;
+    }
+
+    .busca {
+        order: 3;
+        width: 100%;
+        max-width: none;
+    }
+
+    .lista-conta {
+        justify-content: flex-start;
+        width: fit-content;
+    }
+
+    .lista-conta span {
+    display: none;
+    }
+
+    .lista-conta i {
+    font-size: 22px;
+    }
+
+    .cep {
+        order: 4;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-menu { flex-wrap: wrap; }
+
+    .categoria { 
+        order: -1; 
+        width: 100%;
+    }
+
+    .cadastrar-vendedor { flex-direction: column; }
+
+    .lista-produtos { grid-template-columns: 1fr; }
+    .lista-depoimentos { grid-template-columns: 1fr; }
+    .beneficios { grid-template-columns: 1fr; }
+
     .rodape-conteudo {
         grid-template-columns: 1fr;
         justify-content: start;
         text-align: center;
     }
-
-     .rodape-social {
-        align-items: center;
-    }
+    .rodape-social { align-items: center; }
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .lista-produtos { grid-template-columns: repeat(2, 1fr); }
-  .lista-depoimentos { grid-template-columns: repeat(2, 1fr); }
-  .beneficios { grid-template-columns: repeat(2, 1fr); }
-  .rodape-conteudo { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* Mobile grande */
-@media (max-width: 768px) {
-  .logo img { height: 120px; }
-  .lista-menu { gap: 16px; font-size: 16px; }
-  .banner-texto h1 { font-size: 32px; }
-  .busca { max-width: 100%; }
-  .topo { flex-direction: column; align-items: stretch; }
-  .logo-busca { flex-direction: column; gap: var(--espacamento); }
-  .busca { max-width: none; width: 100%; }
-  .nav-menu { flex-wrap: wrap; }
-  .categoria { order: -1; width: 100%; }
-  
-}
-
-/* Mobile pequeno */
+/* Mobile pequeno - até 480px */
 @media (max-width: 480px) {
-  .lista-produtos { grid-template-columns: 1fr; }
-  .lista-depoimentos { grid-template-columns: 1fr; }
-  .beneficios { grid-template-columns: 1fr; }
-  .rodape-conteudo { grid-template-columns: 1fr; }
-  .banner { min-height: auto; padding: var(--espacamento); }
-  .banner-texto h1 { font-size: 24px; }
-  .topo { flex-wrap: wrap; }
-  .logo-busca { width: 100%; order: -1; }
-  .menu-conta { width: 100%; }
+    .banner { min-height: auto; padding: var(--espacamento); }
+    .banner-texto h1 { font-size: 24px; }
+    .topo { flex-wrap: wrap; }
+    .menu-conta { width: 100%; }
 }
 

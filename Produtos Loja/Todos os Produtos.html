@@ -6,98 +6,214 @@
     <title>Todos os Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/Produtos.css">
-    <link rel="stylesheet" href="css/header-global.css">
+    <link rel="stylesheet" href="css/header-footer.css">
 </head>
 <body>
 
 <div class="site-container">
 
 <!-- HEADER PRINCIPAL DO SITE -->
-<header class="header">
-    <!-- Parte superior: Logo, pesquisa e ações -->
-    <div class="topo-header">
-        <!-- Logo -->
-        <div class="logo-site">
-            <img src="Imagens/logocomfundobranco.png" alt="Feirinha Pai d’égua">
-        </div>
+<!-- HEADER GLOBAL -->
+<header class="menu">
 
-        <!-- Barra de pesquisa -->
-        <div class="pesquisa">
+    <!-- TOPO PRINCIPAL -->
+    <div class="topo">
 
-            <input 
-                type="text" 
-                placeholder="Buscar produtos, artesão, categorias..."
-            >
+        <div class="logo-busca">
 
-            <button class="btn-pesquisa">
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-            </button>
-
-        </div>
-
-
-
-        <!-- Ações do usuário -->
-        <div class="acoes-header">
-
-
-            <div class="acao-header">
-
-<i class="fa-regular fa-user"></i>
-
-                <p>
-                    Entrar
-                </p>
-
+            <div class="logo">
+                <img 
+                    src="Imagens/logocomfundobranco.png" 
+                    alt="Feirinha Pai d'Égua" 
+                    width="250"
+                >
             </div>
 
+            <form class="busca">
 
+                <input
+                    type="text"
+                    placeholder="Buscar produtos, artesãos, categorias..."
+                >
 
-            <div class="acao-header">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
 
-<i class="fa-regular fa-heart"></i>
-
-                <p>
-                    Favoritos
-                </p>
-
-            </div>
-
-
-
-            <div class="acao-header">
-
-<i class="fa-duotone fa-solid fa-bag-shopping"></i>
-
-                <p>
-                    Sacola
-                </p>
-
-            </div>
-
+            </form>
 
         </div>
 
+
+        <!-- CONTA / FAVORITOS / SACOLA -->
+        <nav class="menu-conta">
+
+            <ul class="lista-conta">
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Entrar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Sacola</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
 
     </div>
 
-</header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="nav-menu">
+
+        <!-- CATEGORIAS -->
+        <div class="categoria">
+
+            <button class="botao-categoria">
+                ☰ Categorias
+            </button>
+
+            <ul class="lista-categorias">
+
+                <li>
+                    <a href="#">
+                        Novidades
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cerâmica Marajoara
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cestaria
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Arte em Miriti
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Biojoias
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Escultura em Madeira
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Tecidos e Bordados
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Decoração
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Acessórios
+                        <span>
+                            <i class="fa-solid fa-greater-than"></i>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
 
 
-    <!-- Menu de navegação -->
-    <nav class="menu-header">
-        <a href="#">INÍCIO</a>
-        <a href="#" class="ativo">PRODUTOS</a>
-        <a href="#">ARTESÃOS</a>
-        <a href="#">SOBRE NÓS</a>
-        <a href="#">CONTATO</a>
+        <!-- LINKS PRINCIPAIS -->
+        <ul class="lista-menu">
+
+            <li>
+                <a href="#">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a href="Todos os Produtos.html">
+                    Produtos
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Artesãos
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Sobre Nós
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Contato
+                </a>
+            </li>
+
+        </ul>
+
     </nav>
 
-
-
-
+</header>
 
 
 <main>
@@ -106,6 +222,7 @@
         <!-- Cabeçalho da seção -->
 <header class="cabecalho-produtos">
 
+    <br><br>
     <span class="subtitulo">
         Artesanato Paraense
     </span>
@@ -118,19 +235,9 @@
         Descubra peças únicas produzidas por artesãos do Pará. Cada produto carrega tradição, cultura e a riqueza da Amazônia.
     </p>
 
-</header>
 
-        <!-- Categorias -->
-        <nav class="categorias">
-            <button class="categoria ativa">Todos</button>
-            <button class="categoria">Biojoias</button>
-            <button class="categoria">Cerâmica</button>
-            <button class="categoria">Miriti</button>
-            <button class="categoria">Palha</button>
-            <button class="categoria">Cestaria</button>
-            <button class="categoria">Madeira</button>
-            <button class="categoria">Decoração</button>
-        </nav>
+
+
 
         <!-- Filtros -->
 <section class="filtros">
@@ -211,6 +318,13 @@
     <a href="Produto Colar Acai.html" class="btn-produto">
         Ver produto
     </a>
+
+    <button class="btn-sacola">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Adicionar à sacola
+        </button>
+
+    
 
 </article>
 
@@ -412,6 +526,7 @@
         <h3 class="nome-produto">
             Copinhos Artesanais
         </h3>
+        <br>
         <p class="artesao">
             Artesão: Thiago Rezende
         </p>
@@ -551,25 +666,135 @@
 
 
         <!-- Rodapé da seção -->
-<footer class="rodape-produtos">
+<br><br>
+</div>
+<!-- FOOTER GLOBAL -->
 
-    <h3>Não encontrou o que procurava?</h3>
+<div class="footer-container">
 
-    <p>
-        Explore nossa coleção completa de artesanato paraense e descubra novas peças produzidas por artesãos da região.
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+        <!-- SOBRE A FEIRINHA -->
+        <div class="coluna-rodape">
+
+            <h4>Sobre a Feirinha</h4>
+
+            <ul class="lista-rodape">
+
+                <li>
+                    <a href="#">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Como funciona
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cadastre sua loja
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Trocas e Devoluções
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- AJUDA -->
+        <div class="coluna-rodape">
+
+            <h4>Ajuda</h4>
+
+            <ul class="lista-rodape">
+
+                <li>
+                    <a href="#">
+                        Política de Privacidade
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Termos de Uso
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- REDES SOCIAIS -->
+        <div class="rodape-social">
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-facebook"></i>
+
+                <span>
+                    Feirinha Pai d'Égua
+                </span>
+
+            </a>
+
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <span>
+                    @feirinhapaidegua
+                </span>
+
+            </a>
+
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                    (91) 99999-9999
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <p class="copyright">
+        © 2026 Feirinha Pai d'Egua. Todos os direitos reservados.
     </p>
 
-    <a href="#" class="btn-ver-mais">
-        Ver todos os produtos
-    </a>
-
 </footer>
+</div>
 
-    </section>
+</section>
 
 </main>
 
 
-</div>
+
 </body>
 </html>

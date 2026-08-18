@@ -13,7 +13,7 @@ font-family:var(--fonte-texto);
 =========================== */
 body{
 font-family: Arial, Helvetica, sans-serif;
-background-color: #F8F4EC;
+background-color: #f7ede3;
 }
 
 /* ===========================
@@ -185,19 +185,42 @@ margin-bottom: 10px;
 }
 
 .btn-produto{
-display: block;
-text-decoration: none;
-background-color: #2e7d32;
-color: white;
-text-align: center;
-padding: 12px;
-font-weight: bold;
-transition: .3s;
-margin-top: auto;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--verde-jambu);
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-sacola {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--verde-jambu);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--verde-jambu);
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-produto:hover{
 background: #225c25;
+background-color: var(--verde-escuro);
+}
+
+.btn-sacola:hover {
+background-color: var(--verde-jambu);
+color: var(--branco);
 }
 
 .badge{
@@ -232,6 +255,13 @@ z-index: 2;
 background: #1f5e2e;
 color: white;
 transform: scale(1.1);
+}
+
+.acoes-produto {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin-top: 15px;
 }
 
 /* ===========================
@@ -319,3 +349,4 @@ font-weight: bold;
 .btn-ver-mais:hover{
 background-color: #225c25;
 }
+

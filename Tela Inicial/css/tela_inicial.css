@@ -74,14 +74,14 @@ ul {
 }
 
 .banner-img img {
-    width: 100%;
+    width: 700px;
     border-radius: var(--borda);
     display: block;
 }
 
 .banner-texto h1 {
     font-family: var(--fonte-titulo);
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
     color: var(--verde-jambu);
     margin-bottom: 16px;
@@ -94,6 +94,7 @@ ul {
     margin-bottom: 24px;
     max-width: 450px;
     justify-items: center;
+    padding: 20px;
 }
 
 .botao {
@@ -381,12 +382,13 @@ main {
 
 .botao-favoritar {
     position: absolute;
-    top: var(--espacamento);
+    top: calc(var(--espacamento) + 6px);
     right: var(--espacamento);
     background:none;
     border:none;
     font-size: 20px;
     cursor: pointer;
+    color: var(--verde-escuro);
 }
 
 .card-produto img {
@@ -427,18 +429,20 @@ main {
     max-width: 1400px;
     margin: 0 auto var(--espacamento) auto;
     padding: var(--espacamento);
-    background-color: var(--cor-secundaria);
+    background-color: var(--terracota);
     border-radius: var(--borda);
 }
 
 .cadastrar-texto {
     flex: 1;
+    justify-items: center;
 }
 
 .cadastrar-texto h2 {
     font-family: var(--fonte-titulo);
-    font-size: 28px;
-    color: var(--texto-escuro);
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--verde-jambu);
     margin-bottom: 12px;
 }
 
@@ -446,21 +450,21 @@ main {
     font-family: var(--fonte-texto);
     font-size: 16px;
     color: var(--texto-escuro);
-    margin-bottom: 56px;
+    margin-bottom: 24px;
     max-width: 450px;
+    justify-items: center;
+    padding: var(--espacamento);
 }
 
 .botao-cadastrar {
     display: inline-block;
-    padding: 16px 32px;
+    padding: 14px 32px;
     background-color: var(--verde-escuro);
     color: var(--cor-fundo);
     font-family: var(--fonte-texto);
     font-weight: 600;
     border-radius: var(--borda);
     box-shadow: var(--sombra);
-    margin-left: 70px;
-    margin-top: 45px;
     transition: transform var(--tempo) ease, box-shadow var(--tempo) ease;
 }
 
@@ -512,6 +516,9 @@ main {
 }
 
 .card-depoimento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: var(--espacamento);
     background-color: var(--branco);
     border-radius: var(--borda);
@@ -556,6 +563,7 @@ main {
 
 .card-depoimento span {
     font-size: 14px;
+    margin-top: auto;
 }
 
 .beneficios {

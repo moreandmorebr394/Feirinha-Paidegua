@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
     /* Cores */
@@ -61,12 +61,12 @@ ul {
     border-radius: var(--borda);
     padding: calc(var(--espacamento) * 2);
     min-height: 420px;
-    justify-items: center;
+    text-align: center;
 }
 
 .banner-texto {
     flex: 1;
-    justify-items: center;
+    text-align: center;
 }
 
 .banner-img {
@@ -74,7 +74,8 @@ ul {
 }
 
 .banner-img img {
-    width: 700px;
+    width: 100%;
+    width: 650px;
     border-radius: var(--borda);
     display: block;
 }
@@ -93,7 +94,7 @@ ul {
     color: var(--texto-escuro);
     margin-bottom: 24px;
     max-width: 450px;
-    justify-items: center;
+    text-align: center;
     padding: 20px;
 }
 
@@ -452,7 +453,7 @@ main {
     color: var(--texto-escuro);
     margin-bottom: 24px;
     max-width: 450px;
-    justify-items: center;
+    align-items: center;
     padding: var(--espacamento);
 }
 
@@ -653,7 +654,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-left: 150px;
+    margin-left: 0;
+    justify-content: center;
  
 }
 
@@ -735,9 +737,9 @@ main {
          white-space: nowrap; 
     }
 
-    .banner-texto h1 { 
-        font-size: 32px;
-    }
+    .banner { min-height: auto; }
+
+    .banner-texto h1 {  font-size: 32px; }
 
     .topo {
         display: flex;
@@ -773,13 +775,9 @@ main {
         width: fit-content;
     }
 
-    .lista-conta span {
-    display: none;
-    }
+    .lista-conta span { display: none; }
 
-    .lista-conta i {
-    font-size: 22px;
-    }
+    .lista-conta i { font-size: 22px;}
 
     .cep {
         order: 4;
@@ -797,7 +795,9 @@ main {
     .cadastrar-vendedor { flex-direction: column; }
 
     .lista-produtos { grid-template-columns: 1fr; }
+
     .lista-depoimentos { grid-template-columns: 1fr; }
+
     .beneficios { grid-template-columns: 1fr; }
 
     .rodape-conteudo {
@@ -813,5 +813,14 @@ main {
     .banner { min-height: auto; padding: var(--espacamento); }
     .banner-texto h1 { font-size: 24px; }
     .topo { flex-wrap: wrap; }
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .busca { max-width: 100%; }
+
+    .categoria { width: 100%; }
+
+    .lista-categorias { width: 100%; }
 }
 

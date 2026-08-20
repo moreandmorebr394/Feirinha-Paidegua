@@ -143,45 +143,66 @@ transform: scale(1.05);
 }
 
 .info-produto{
-padding: 16px;
-flex-grow: 1;
+padding: 14px 16px 10px;
+display: flex;
+flex-direction: column;
 }
 
-.nome-produto{
-font-size: 20px;
+.nome-produto {
+height: 44px;
+margin: 0 0 6px;
+font-family: var(--fonte-texto);
+font-size: 17px;
 font-weight: 700;
-color: #2d2d2d;
-margin-bottom: 10px;
+line-height: 22px;
+display: flex;
+align-items: flex-start;
 }
 
-.artesao{
-color: #666;
-font-size: 15px;
-margin-bottom: 12px;
-}
-
-.avaliacao{
+.artesao {
+height: 22px;
+margin: 0 0 8px;
+font-family: var(--fonte-texto);
+font-size: 13px;
+color: #777;
 display: flex;
 align-items: center;
-gap: 10px;
-margin-bottom: 15px;
 }
 
-.estrelas{
-color: #f4b400;
-letter-spacing: 2px;
+.avaliacao {
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 6px;
 }
 
-.nota{
-font-size: 14px;
-color: #777;
+.estrelas {
+    color: #F2A900;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.preco{
-font-size: 28px;
-font-weight: bold;
-color: #2e7d32;
-margin-bottom: 10px;
+.nota {
+    font-family: var(--fonte-texto);
+    font-size: 12px;
+    color: #777;
+}
+
+.preco {
+    height: 32px;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    font-family: var(--fonte-texto);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--verde-jambu);
 }
 
 .btn-produto{
@@ -189,38 +210,48 @@ margin-bottom: 10px;
     width: 100%;
     padding: 12px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px 10px ;
     background-color: var(--verde-jambu);
     color: var(--branco);
     font-family: var(--fonte-texto);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn-sacola {
     width: 100%;
-    padding: 12px;
-    border: 2px solid var(--verde-jambu);
-    border-radius: 10px;
-    background-color: transparent;
-    color: var(--verde-jambu);
+    height: 44px;
+
+    border: none;
+    border-radius: 10px 10px;
+
+    background-color: var(--verde-jambu);
+    color: var(--branco);
+
     font-family: var(--fonte-texto);
     font-size: 14px;
     font-weight: 700;
+
     cursor: pointer;
-    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    transition: 0.3s ease;
 }
 
 .btn-produto:hover{
-background: #225c25;
-background-color: var(--verde-escuro);
+color: var(--verde-jambu);
+background-color: var(--branco);
 }
 
 .btn-sacola:hover {
-background-color: var(--verde-jambu);
-color: var(--branco);
+background-color: var(--branco);
+color: var(--verde-jambu);
 }
 
 .badge{
@@ -260,7 +291,7 @@ transform: scale(1.1);
 .acoes-produto {
 display: flex;
 flex-direction: column;
-gap: 8px;
+gap: 4px;
 margin-top: 15px;
 }
 

@@ -4,91 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pequeno Vaso Artesanal</title>
-    <link rel="stylesheet" href="css/header-global.css">
-    <link rel="stylesheet" href="css/Produtos.css">
+    <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/produto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    
+  <div class="site-container">
 
     <!-- HEADER GLOBAL -->
-    <header class="header">
+    <header class="menu">
 
-        <div class="topo-header">
+    <div class="topo">
 
-            <div class="logo-site">
-                <img src="Imagens/logocomfundobranco.png" alt="Feirinha Pai d’égua">
+        <div class="logo-busca">
+
+            <div class="logo">
+                <img 
+                    src="Imagens/logocomfundobranco.png" 
+                    alt="Feirinha Pai d'Égua"
+                    width="250"
+                >
             </div>
 
-            <div class="pesquisa">
+            <form class="busca">
 
-                <input 
-                    type="text" 
-                    placeholder="Buscar produtos, artesão, categorias..."
+                <input
+                    type="text"
+                    placeholder="Buscar produtos, artesãos, categorias..."
                 >
 
-                <button class="btn-pesquisa">
+                <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
-            </div>
-
-            <div class="acoes-header">
-
-                <div class="acao-header">
-                    <i class="fa-regular fa-user"></i>
-                    <p>Entrar</p>
-                </div>
-
-                <div class="acao-header">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Favoritos</p>
-                </div>
-
-                <div class="acao-header">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <p>Sacola</p>
-                </div>
-
-            </div>
+            </form>
 
         </div>
 
-    </header>
+
+        <nav class="menu-conta">
+
+            <ul class="lista-conta">
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Entrar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Sacola</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
 
 
-    <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="menu-header">
+    <nav class="nav-menu">
 
-        <a href="index.html">
-            INÍCIO
-        </a>
+        <div class="categoria">
 
-        <a href="Todos os Produtos.html" class="ativo">
-            PRODUTOS
-        </a>
+            <button class="botao-categoria">
+                ☰ Categorias
+            </button>
 
-        <a href="#">
-            ARTESÃOS
-        </a>
+            <ul class="lista-categorias">
 
-        <a href="#">
-            SOBRE NÓS
-        </a>
+                <li>
+                    <a href="#">
+                        Novidades
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
 
-        <a href="#">
-            CONTATO
-        </a>
+                <li>
+                    <a href="#">
+                        Cerâmica Marajoara
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cestaria
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Arte em Miriti
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Biojoias
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Escultura em Madeira
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Tecidos e Bordados
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Decoração
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Acessórios
+                        <span><i class="fa-solid fa-greater-than"></i></span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <ul class="lista-menu">
+
+            <li>
+                <a href="#">Início</a>
+            </li>
+
+            <li>
+                <a href="Todos_os_Produtos.html">Produtos</a>
+            </li>
+
+            <li>
+                <a href="#">Artesãos</a>
+            </li>
+
+            <li>
+                <a href="#">Sobre Nós</a>
+            </li>
+
+            <li>
+                <a href="#">Contato</a>
+            </li>
+
+        </ul>
 
     </nav>
 
+</header>
+
 
     <!-- PÁGINA DO PRODUTO -->
-    <main class="pagina-produto">
-        
-    </main>
 
     <main class="pagina-produto">
 
@@ -223,5 +317,122 @@
     </section>
 
 </main>
+
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+        <!-- SOBRE -->
+        <div class="coluna-rodape">
+
+            <h4>Sobre a Feirinha</h4>
+
+            <ul class="lista-rodape">
+
+                <li>
+                    <a href="#">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Como funciona
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Cadastre sua loja
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Trocas e Devoluções
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- AJUDA -->
+        <div class="coluna-rodape">
+
+            <h4>Ajuda</h4>
+
+            <ul class="lista-rodape">
+
+                <li>
+                    <a href="#">
+                        Política de Privacidade
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Termos de Uso
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- REDES SOCIAIS -->
+        <div class="rodape-social">
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-facebook"></i>
+
+                <span>
+                    Feirinha Pai d'Égua
+                </span>
+
+            </a>
+
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <span>
+                    @feirinhapaidegua
+                </span>
+
+            </a>
+
+
+            <a href="#" class="rodape-social-item">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                    (91) 99999-9999
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 Feirinha Pai d'Egua. Todos os direitos reservados.
+    </p>
+
+</footer>
+</div>
 </body>
 </html>

@@ -36,11 +36,12 @@ Desenvolver um marketplace fictício de artesanato paraense, inspirado em plataf
 
 | Cor            | Código  |
 | -------------- | ------- |
-| Verde Amazônia | #2E7D32 |
 | Verde Escuro   | #1B5E20 |
-| Bege           | #F5E6C8 |
-| Marrom         | #8D6E63 |
-| Dourado        | #F9A825 |
+| Verde Jambu    | #1B5E20 |
+| Cor de Fundo   | #F7EDE3 |
+| Cor Secundária | #DECDBD |
+| Terracota      | #CDA280 |
+| Texto Escuro   | #3B2A20 |
 | Branco         | #FFFFFF |
 
 ---

@@ -206,3 +206,166 @@ main {
 .btn-sacola i{
     margin-right:8px;
 }
+
+/* ===========================
+   RESPONSIVIDADE
+   PÁGINAS INDIVIDUAIS
+=========================== */
+
+@media (max-width: 1024px) {
+
+    .pagina-produto {
+        padding: 50px 30px;
+    }
+
+    .produto-detalhes {
+        gap: 40px;
+    }
+
+    .produto-info h1 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .pagina-produto {
+        padding: 40px 20px;
+    }
+
+    .produto-detalhes {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        align-items: center;
+    }
+
+    .produto-imagem {
+        width: 100%;
+    }
+
+    .produto-imagem img {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .produto-info {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .produto-info h1 {
+        font-size: 32px;
+    }
+
+    .btn-sacola {
+        max-width: 100%;
+    }
+
+    .descricao-produto {
+        margin-top: 50px;
+        padding-top: 30px;
+    }
+
+    .informacoes-produto {
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    .dados-produto {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .pagina-produto {
+        padding: 30px 15px;
+    }
+
+    .produto-detalhes {
+        gap: 25px;
+    }
+
+    .produto-imagem img {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .produto-info h1 {
+        font-size: 27px;
+        line-height: 1.25;
+    }
+
+    .categoria-produto {
+        font-size: 13px;
+    }
+
+    .artesao {
+        font-size: 15px;
+    }
+
+    .avaliacao {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .estrelas {
+        font-size: 18px;
+    }
+
+    .preco {
+        font-size: 27px;
+        margin: 15px 0;
+    }
+
+    .quantidade {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .quantidade > span:first-child {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+
+    .btn-sacola {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    .descricao-produto {
+        margin-top: 40px;
+        padding-top: 25px;
+    }
+
+    .descricao-produto h2 {
+        font-size: 23px;
+    }
+
+    .descricao-produto p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .informacoes-produto {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .informacoes-produto h2 {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .dados-produto p {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+}

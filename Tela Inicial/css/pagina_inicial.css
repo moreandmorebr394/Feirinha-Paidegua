@@ -33,6 +33,7 @@ body {
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     color: var(--texto-escuro);
+    
 }
 
 a {
@@ -64,6 +65,7 @@ ul {
 .banner-texto {
     flex: 1;
     text-align: center;
+    justify-items: center;
 }
 
 .banner-img {
@@ -110,7 +112,7 @@ ul {
     position: absolute;
     bottom: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     display: flex;
     gap: 8px;
 }
@@ -425,7 +427,7 @@ main {
 
 .botao-favoritar.favoritado i {
     font-weight: 900;
-    color: #C0392B;
+    color: var(--terracota);
 }
 
 .card-produto img {
@@ -836,12 +838,12 @@ main {
 
     .beneficios { grid-template-columns: 1fr; }
 
-    .rodape-conteudo {
+    /* .rodape-conteudo {
         grid-template-columns: 1fr;
         justify-content: start;
         text-align: center;
     }
-    .rodape-social { align-items: center; }
+    .rodape-social { align-items: center; } */
 }
 
 /* Mobile pequeno - até 480px */

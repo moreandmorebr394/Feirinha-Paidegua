@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Feirinha Pai D'Égua</title>
+
+    <link rel="stylesheet" href="css/registerusuario.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left-panel">
+
+            <img
+                src="https://6a712e4d693c048900ae34c7.imgix.net/sandbox/1000130618.png"
+                class="logo"
+                alt="Logo Feirinha Pai D'Égua"
+            >
+
+        </div>
+
+
+        <div class="right-panel">
+
+            <h1>Crie sua conta</h1>
+
+            <p>O seu próximo grande passo começa aqui.</p>
+
+
+            <form id="formCadastro">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Nome Completo"
+                    >
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                    >
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                        type="text"
+                        id="telefone"
+                        placeholder="Telefone"
+                    >
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Senha"
+                    >
+
+                    <i
+                        class="fa-solid fa-eye toggle-password"
+                        id="mostrarSenha"
+                        onclick="mostrarSenha()">
+                    </i>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        placeholder="Confirmar Senha"
+                    >
+
+                    <i
+                        class="fa-solid fa-eye toggle-password"
+                        id="mostrarConfirmarSenha"
+                        onclick="mostrarConfirmarSenha()">
+                    </i>
+
+                </div>
+
+
+                <button
+                    class="btn-register"
+                    type="submit">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Registrar
+
+                </button>
+
+
+                <button
+                    class="btn-login"
+                    type="button"
+                    onclick="window.location.href='logininicio.html'">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    Voltar ao Login
+
+                </button>
+
+
+                <!-- MENSAGEM DE SUCESSO -->
+
+                <div
+                    id="mensagemSucesso"
+                    class="mensagem-sucesso">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        Cadastro realizado com sucesso!
+                    </span>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const formulario = document.getElementById("formCadastro");
+
+        formulario.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nome =
+                document.getElementById("nome").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const telefone =
+                document.getElementById("telefone").value.trim();
+
+            const senha =
+                document.getElementById("senha").value;
+
+            const confirmarSenha =
+                document.getElementById("confirmarSenha").value;
+
+
+            if (
+                nome === "" ||
+                email === "" ||
+                telefone === "" ||
+                senha === "" ||
+                confirmarSenha === ""
+            ) {
+
+                alert("Por favor, preencha todos os campos.");
+
+                return;
+            }
+
+
+            if (senha.length < 6) {
+
+                alert("A senha deve ter pelo menos 6 caracteres.");
+
+                return;
+            }
+
+
+            if (senha !== confirmarSenha) {
+
+                alert("As senhas não são iguais.");
+
+                return;
+            }
+
+
+            const mensagem =
+                document.getElementById("mensagemSucesso");
+
+
+            mensagem.classList.add("mostrar");
+
+
+            formulario.reset();
+
+
+            setTimeout(function() {
+
+                mensagem.classList.remove("mostrar");
+
+            }, 4000);
+
+        });
+
+
+        function mostrarSenha() {
+
+            const senha =
+                document.getElementById("senha");
+
+            const icone =
+                document.getElementById("mostrarSenha");
+
+
+            if (senha.type === "password") {
+
+                senha.type = "text";
+
+                icone.classList.remove("fa-eye");
+
+                icone.classList.add("fa-eye-slash");
+
+            } else {
+
+                senha.type = "password";
+
+                icone.classList.remove("fa-eye-slash");
+
+                icone.classList.add("fa-eye");
+
+            }
+
+        }
+
+
+        function mostrarConfirmarSenha() {
+
+            const senha =
+                document.getElementById("confirmarSenha");
+
+            const icone =
+                document.getElementById("mostrarConfirmarSenha");
+
+
+            if (senha.type === "password") {
+
+                senha.type = "text";
+
+                icone.classList.remove("fa-eye");
+
+                icone.classList.add("fa-eye-slash");
+
+            } else {
+
+                senha.type = "password";
+
+                icone.classList.remove("fa-eye-slash");
+
+                icone.classList.add("fa-eye");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

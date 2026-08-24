@@ -17,8 +17,8 @@ body {
    2. CONTAINER PRINCIPAL
    ========================================================== */
 .checkout-container {
-  max-width: 100%;
-  width: 100%;
+  max-width: 60%;
+  width: 60%;
   margin: 0 auto;
   background-color: #FBF4EA;                       /* Cream de fundo dos blocos */
   border-radius: 0px;
@@ -131,8 +131,8 @@ h2 {
 }
 
 .foto-produto {
-  width: 100px;
-  height: 100px;
+  width: 180px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -153,14 +153,15 @@ h2 {
 }
 
 .nome-produto {
-  font-size: 13.5px;
+  font-size: 20px;
+  font-weight: 500;
   color: #333333;
 }
 
 .preco-produto {
   color: #D94336;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .qtd-stepper {
@@ -176,7 +177,7 @@ h2 {
   border: none;
   background-color: #EFE4D4;
   border-radius: 5px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
   color: #333333;
   cursor: pointer;
@@ -472,8 +473,8 @@ h2 {
 
 /* Sobrescreve o btn-fazer-pedido só dentro do footer-final da Sacola */
 .footer-final .btn-fazer-pedido {
-  width: 100%;
-  margin-left: 0;
+  width: 60%;
+  margin-left: 172px;
   padding: 14px 0;
   font-size: 14px;
   border-radius: 10px;
@@ -507,7 +508,7 @@ h2 {
 }
 
 .sugestao-imagem {
-  width: 100%;
+  width: 60%;
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;

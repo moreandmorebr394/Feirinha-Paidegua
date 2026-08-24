@@ -848,12 +848,12 @@ main {
 
     .beneficios { grid-template-columns: 1fr; }
 
-    /* .rodape-conteudo {
+    .rodape-conteudo {
         grid-template-columns: 1fr;
         justify-content: start;
         text-align: center;
     }
-    .rodape-social { align-items: center; } */
+    .rodape-social { align-items: center; }
 }
 
 /* Mobile pequeno - até 480px */

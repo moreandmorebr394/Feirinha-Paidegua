@@ -6,24 +6,21 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #F7EDE3;
-  /* Fundo rosa/terroso da página */
+  background-color: #E6D3CB;                       /* Fundo rosa/terroso da página */
   color: #333333;
   margin: 0;
   padding: 15px;
-  padding-bottom: 90px;
-  /* Espaço pra barra fixa inferior não cobrir conteúdo */
+  padding-bottom: 90px;                             /* Espaço pra barra fixa inferior não cobrir conteúdo */
 }
 
 /* ==========================================================
    2. CONTAINER PRINCIPAL
    ========================================================== */
 .checkout-container {
-  max-width: 700px;
-  width: 300%;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  background-color: #FBF4EA;
-  /* Cream de fundo dos blocos */
+  background-color: #FBF4EA;                       /* Cream de fundo dos blocos */
   border-radius: 0px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -122,7 +119,7 @@ h2 {
 .item-produto {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 12px;
   margin-bottom: 16px;
 }
 
@@ -134,8 +131,8 @@ h2 {
 }
 
 .foto-produto {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -374,7 +371,7 @@ h2 {
   font-weight: 700;
   border-radius: 8px;
   cursor: pointer;
-  margin-left: 100px;
+  margin-left: 120px;
 }
 
 .btn-fazer-pedido:hover {
@@ -468,4 +465,88 @@ h2 {
   align-items: center;
   margin-bottom: 10px;
   font-size: 14px;
+}
+/* ==========================================================
+   9. FOOTER FINAL — BOTÃO + SUGESTÃO DE PRODUTOS (página Sacola)
+   ========================================================== */
+
+/* Sobrescreve o btn-fazer-pedido só dentro do footer-final da Sacola */
+.footer-final .btn-fazer-pedido {
+  width: 100%;
+  margin-left: 0;
+  padding: 14px 0;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.sugestao-secao {
+  margin-top: 24px;
+}
+
+.sugestao-titulo {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 14px 0;
+}
+
+.sugestao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.sugestao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #F3E9DA;
+  border-radius: 10px;
+  padding: 10px 8px;
+}
+
+.sugestao-imagem {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #EFE4D4;
+  margin-bottom: 8px;
+}
+
+.sugestao-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sugestao-nome {
+  font-size: 11.5px;
+  color: #333333;
+  margin: 0 0 2px 0;
+  line-height: 1.3;
+}
+
+.sugestao-preco {
+  font-size: 12px;
+  font-weight: 700;
+  color: #D94336;
+  margin: 0 0 8px 0;
+}
+
+.sugestao-btn {
+  width: 100%;
+  background-color: #D94336;
+  color: #FFFFFF;
+  border: none;
+  padding: 6px 0;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sugestao-btn:hover {
+  background-color: #B83327;
 }

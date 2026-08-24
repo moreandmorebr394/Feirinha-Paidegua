@@ -33,6 +33,7 @@ body {
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     color: var(--texto-escuro);
+    
 }
 
 a {
@@ -56,7 +57,7 @@ ul {
     background-color: var(--terracota);
     border-radius: var(--borda);
     padding: calc(var(--espacamento) * 2);
-    min-height: 420px;
+    height: 420px;
     text-align: center;
     overflow: hidden;
 }
@@ -64,15 +65,20 @@ ul {
 .banner-texto {
     flex: 1;
     text-align: center;
+    justify-items: center;
 }
 
 .banner-img {
     flex: 1;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--borda);
 }
 
 .banner-img img {
     width: 100%;
-    width: 650px;
+    height: 100%;
+    object-fit: cover;
     border-radius: var(--borda);
     display: block;
 }
@@ -97,22 +103,28 @@ ul {
 
 .banner-slide {
     display: none;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: var(--espacamento);
+    height: 100%;
 }
 
 .banner-slide.ativo {
     display: flex;
 }
 
+.banner-slides {
+    height: 100%;
+}
+
 .banner-bolinhas {
     position: absolute;
     bottom: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     display: flex;
     gap: 8px;
+    z-index: 5;
 }
 
 .bolinha {
@@ -425,7 +437,7 @@ main {
 
 .botao-favoritar.favoritado i {
     font-weight: 900;
-    color: #C0392B;
+    color: var(--terracota);
 }
 
 .card-produto img {

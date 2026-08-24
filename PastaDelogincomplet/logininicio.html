@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Feirinha Pai D'Égua</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/logininicio.css">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <img
+            src="https://6a712e4d693c048900ae34c7.imgix.net/sandbox/1000130618.png"
+            width="800"
+            alt="Logo Feirinha Pai D'Égua">
+
+        <h2>Seja Muito Bem-vindo!</h2>
+
+        <p>
+            Entre com sua conta para acessar a plataforma.
+        </p>
+
+    </div>
+
+    <div class="right">
+
+        <h1>Login</h1>
+
+        <p>Informe seu e-mail e senha.</p>
+
+        <form id="formLogin">
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                    autocomplete="email">
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Senha"
+                    autocomplete="current-password">
+
+                <i
+                    class="fa-solid fa-eye toggle-password"
+                    id="toggleSenha">
+                </i>
+
+            </div>
+
+            <div class="options">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="lembrar">
+
+                    Lembrar de mim
+
+                </label>
+
+                <a
+                    href="#"
+                    id="esqueciSenha">
+
+                    Esqueci minha senha
+
+                </a>
+
+            </div>
+
+            <button
+                type="submit"
+                id="btnEntrar">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                Entrar
+
+            </button>
+
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="register">
+
+            Ainda não possui conta?
+
+            <a href="atruserlogin.html">
+                Cadastre-se
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const formLogin =
+        document.getElementById("formLogin");
+
+    const email =
+        document.getElementById("email");
+
+    const senha =
+        document.getElementById("senha");
+
+    const lembrar =
+        document.getElementById("lembrar");
+
+    const toggleSenha =
+        document.getElementById("toggleSenha");
+
+    const esqueciSenha =
+        document.getElementById("esqueciSenha");
+
+    const btnEntrar =
+        document.getElementById("btnEntrar");
+
+    function validarEmail(email) {
+
+        const regex =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return regex.test(email);
+
+    }
+
+    function mostrarErro(input, mensagem) {
+
+        limparErro(input);
+
+        input.classList.add("input-erro");
+
+        const erro =
+            document.createElement("small");
+
+        erro.classList.add("mensagem-erro");
+
+        erro.textContent = mensagem;
+
+        input.parentElement.appendChild(erro);
+
+    }
+
+    function limparErro(input) {
+
+        input.classList.remove("input-erro");
+
+        const erro =
+            input.parentElement.querySelector(
+                ".mensagem-erro"
+            );
+
+        if (erro) {
+
+            erro.remove();
+
+        }
+
+    }
+
+    toggleSenha.addEventListener("click", function () {
+
+        if (senha.type === "password") {
+
+            senha.type = "text";
+
+            toggleSenha.classList.remove(
+                "fa-eye"
+            );
+
+            toggleSenha.classList.add(
+                "fa-eye-slash"
+            );
+
+        }
+
+        else {
+
+            senha.type = "password";
+
+            toggleSenha.classList.remove(
+                "fa-eye-slash"
+            );
+
+            toggleSenha.classList.add(
+                "fa-eye"
+            );
+
+        }
+
+    });
+
+    email.addEventListener("input", function () {
+
+        limparErro(email);
+
+    });
+
+    senha.addEventListener("input", function () {
+
+        limparErro(senha);
+
+    });
+
+    formLogin.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        let formularioValido = true;
+
+        if (email.value.trim() === "") {
+
+            mostrarErro(
+                email,
+                "Digite seu e-mail."
+            );
+
+            formularioValido = false;
+
+        }
+
+        else if (
+            !validarEmail(email.value.trim())
+        ) {
+
+            mostrarErro(
+                email,
+                "Digite um e-mail válido."
+            );
+
+            formularioValido = false;
+
+        }
+
+        if (senha.value.trim() === "") {
+
+            mostrarErro(
+                senha,
+                "Digite sua senha."
+            );
+
+            formularioValido = false;
+
+        }
+
+        else if (senha.value.length < 6) {
+
+            mostrarErro(
+                senha,
+                "A senha deve ter pelo menos 6 caracteres."
+            );
+
+            formularioValido = false;
+
+        }
+
+        if (!formularioValido) {
+
+            return;
+
+        }
+
+        if (lembrar.checked) {
+
+            localStorage.setItem(
+                "emailFeirinha",
+                email.value.trim()
+            );
+
+        }
+
+        else {
+
+            localStorage.removeItem(
+                "emailFeirinha"
+            );
+
+        }
+
+        btnEntrar.disabled = true;
+
+        btnEntrar.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> Entrando...';
+
+        setTimeout(function () {
+
+            btnEntrar.disabled = false;
+
+            btnEntrar.innerHTML =
+                '<i class="fa-solid fa-right-to-bracket"></i> Entrar';
+
+            const mensagem =
+                document.createElement("div");
+
+            mensagem.classList.add(
+                "mensagem-sucesso"
+            );
+
+            mensagem.innerHTML =
+                '<i class="fa-solid fa-circle-check"></i> ' +
+                'Login realizado com sucesso!';
+
+            formLogin.appendChild(mensagem);
+
+            setTimeout(function () {
+
+                mensagem.remove();
+
+            }, 3000);
+
+        }, 1200);
+
+    });
+
+    esqueciSenha.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            const emailRecuperacao =
+                prompt(
+                    "Digite seu e-mail para recuperar sua senha:"
+                );
+
+            if (emailRecuperacao === null) {
+
+                return;
+
+            }
+
+            if (
+                emailRecuperacao.trim() === ""
+            ) {
+
+                alert(
+                    "Por favor, digite seu e-mail."
+                );
+
+                return;
+
+            }
+
+            if (
+                !validarEmail(
+                    emailRecuperacao.trim()
+                )
+            ) {
+
+                alert(
+                    "Digite um e-mail válido."
+                );
+
+                return;
+
+            }
+
+            alert(
+                "Solicitação recebida!\n\n" +
+                "Se esse e-mail estiver cadastrado, " +
+                "você receberá as instruções para " +
+                "recuperar sua senha."
+            );
+
+        }
+    );
+
+    const emailSalvo =
+        localStorage.getItem(
+            "emailFeirinha"
+        );
+
+    if (emailSalvo) {
+
+        email.value = emailSalvo;
+
+        lembrar.checked = true;
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

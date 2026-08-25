@@ -66,6 +66,7 @@ ul {
     flex: 1;
     text-align: center;
     justify-items: center;
+    
 }
 
 .banner-img {
@@ -85,20 +86,28 @@ ul {
 
 .banner-texto h1 {
     font-family: var(--fonte-titulo);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--verde-jambu);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .banner-texto p {
     font-family: var(--fonte-texto);
-    font-size: 16px;
+    font-size: 18px;
     color: var(--texto-escuro);
     margin-bottom: 24px;
     max-width: 450px;
     text-align: center;
-    padding: 20px;
+    padding: 28px;
+}
+
+.banner-destaque {
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--verde-jambu);
+    font-style: italic;
 }
 
 .banner-slide {
@@ -199,7 +208,7 @@ main {
 .topo {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .logo-busca {
@@ -782,12 +791,36 @@ main {
     }
 
     .lista-menu a {
-         white-space: nowrap; 
+        white-space: nowrap;
+        font-size: 14px; 
+
     }
 
-    .banner { min-height: auto; }
+    .banner {
+        height: auto;
+        min-height: auto; }
 
     .banner-texto h1 {  font-size: 32px; }
+
+    .banner-slide {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner-img {
+        order: -1;
+        height: 200px;
+    }
+
+    .banner-texto {
+        text-align: center;
+        height: auto;
+    }
+
+    .botao-categoria {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
 
     .topo {
         display: flex;
@@ -833,14 +866,45 @@ main {
         justify-content: center;
     }
 
-    .nav-menu { flex-wrap: wrap; }
-
-    .categoria { 
-        order: -1; 
-        width: 100%;
+    .nav-menu { 
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
     }
 
-    .cadastrar-vendedor { flex-direction: column; }
+    .lista-menu {
+        flex: none;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .categoria { 
+        margin: 0;
+        width: auto;
+        padding: var(--espacamento) var(--espacamento) 0 0 ;
+    }
+
+    .cadastrar-vendedor { 
+        flex-direction: column; 
+    }
+
+    .cadastrar-img {
+    order: -1;
+    }
+
+    .cadastrar-texto {
+        text-align: center;
+    }
+
+    .cadastrar-texto p {
+        margin-bottom: 24px;
+    }
+
+    .botao-cadastrar {
+        margin-left: 0;
+        margin-top: 0;
+    }
 
     .lista-produtos { grid-template-columns: 1fr; }
 
@@ -853,6 +917,7 @@ main {
         justify-content: start;
         text-align: center;
     }
+    
     .rodape-social { align-items: center; }
 }
 
@@ -861,14 +926,7 @@ main {
     .banner { min-height: auto; padding: var(--espacamento); }
     .banner-texto h1 { font-size: 24px; }
     .topo { flex-wrap: wrap; }
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
     .busca { max-width: 100%; }
-
-    .categoria { width: 100%; }
-
     .lista-categorias { width: 100%; }
 }
 

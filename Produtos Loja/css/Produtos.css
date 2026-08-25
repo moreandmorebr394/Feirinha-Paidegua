@@ -370,6 +370,7 @@ border-color: #2e7d32;
 .brand-col p {
     font-size: 0.88rem;
     max-width: 340px;
+    padding: 10px;
     line-height: 1.5;
 }
 

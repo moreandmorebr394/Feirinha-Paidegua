@@ -20,7 +20,6 @@
     --borda: 12px;
     --tempo: 0.4s;
     --deslocamento: -4px;
-    --sombra: 0px 8px 20px rgba(0, 0, 0, .10);
 }
 
 *{
@@ -163,7 +162,7 @@ ul {
     font-weight: 600;
     border-radius: var(--borda);
     box-shadow: var(--sombra);
-    transition: transform var(--tempo) ease, box-shadow var(--tempo) ease;;
+    transition: transform var(--tempo) ease, box-shadow var(--tempo) ease;
 }
 
 .botao-banner:hover {
@@ -245,7 +244,6 @@ main {
     font-family: var(--fonte-texto);
     font-size: 13px;
     color: var(--texto-escuro);
-    justify-content: flex-start;
     background: transparent;
 }
 
@@ -280,7 +278,7 @@ main {
     flex: 1;
     display: flex;
     gap: var(--espacamento);
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
 .lista-menu a {
@@ -327,7 +325,6 @@ main {
 }
     
 .categoria {
-    flex: auto 0 200px;
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
@@ -510,8 +507,8 @@ main {
     color: var(--texto-escuro);
     margin-bottom: 24px;
     max-width: 450px;
-    align-items: center;
     padding: var(--espacamento);
+    text-align: center;
 }
 
 .botao-cadastrar {
@@ -680,7 +677,6 @@ main {
     grid-template-columns: repeat(3, auto);
     justify-content: space-between;
     gap: var(--espacamento);
-    max-width: 1400px;
     margin: 0 auto;
     padding-bottom: var(--espacamento);
 }

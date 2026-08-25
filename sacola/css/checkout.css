@@ -131,8 +131,8 @@ h2 {
 }
 
 .foto-produto {
-  width: 180px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -451,7 +451,7 @@ h2 {
 }
 
 .msg-desconto {
-  font-size: 12px;
+  font-size: 15px;
   color: #6B6058;
   margin: 8px 0 0 0;
 }
@@ -485,7 +485,7 @@ h2 {
 }
 
 .sugestao-titulo {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   color: #333333;
   margin: 0 0 14px 0;
@@ -504,7 +504,7 @@ h2 {
   text-align: center;
   background-color: #F3E9DA;
   border-radius: 10px;
-  padding: 10px 8px;
+  padding: 15px 10px;
 }
 
 .sugestao-imagem {

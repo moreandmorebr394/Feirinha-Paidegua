@@ -36,10 +36,7 @@ cursor: pointer;
 transition: .3s;
 }
 
-.categoria:hover{
-background-color: #2E7D32;
-color: white;
-}
+
 
 .categoria.ativa{
 background-color: #2E7D32;
@@ -580,4 +577,24 @@ border-color: #2e7d32;
         font-size: 13px;
     }
 
+}
+
+.portal_container {
+    width: calc(100% - 140px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 100%;
+}
+
+.portal_container main {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .portal_container {
+        width: 100%;
+    }
 }

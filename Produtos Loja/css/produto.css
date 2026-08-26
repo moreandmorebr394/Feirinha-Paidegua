@@ -21,10 +21,24 @@ main {
     padding: 0 20px;
 }
 
-.site-container {
+/* .site-container {
     width: calc(100% - 140px);
     max-width: 1400px;
     margin: 0 auto;
+} */
+
+.portal_container {
+    width: calc(100% - 140px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 100%;
+}
+
+.portal_container main {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -452,6 +466,14 @@ main {
     .dados-produto p {
         padding: 13px;
         font-size: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .portal_container {
+        width: 100%;
     }
 
 }

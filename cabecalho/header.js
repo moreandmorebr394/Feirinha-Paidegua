@@ -49,7 +49,7 @@ menu.innerHTML = `
                 </div>
 
                 <ul class="lista-menu">
-                    <li><a href="/Tela Inicial/pagina_inicial.html">Início</a></li>
+                    <li><a href="/Tela Inicial/index.html">Início</a></li>
                     <li><a href="/Produtos Loja/Todos_os_Produtos.html">Produtos</a></li>
                     <li><a href="/História do Artesão/html/historiaartesao.html">Artesãos</a></li>
                     <li><a href="/Sobre Nós/html/sobrenos.html">Sobre Nós</a></li>

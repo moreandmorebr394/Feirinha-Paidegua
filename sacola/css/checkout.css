@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #E6D3CB;                       /* Fundo rosa/terroso da página */
+  background-color: #F7EDE3; /*#E6D3CB;*/                    /* Fundo rosa/terroso da página */
   color: #333333;
   margin: 0;
   padding: 15px;
@@ -21,7 +21,7 @@ body {
   width: 60%;
   margin: 0 auto;
   background-color: #FBF4EA;                       /* Cream de fundo dos blocos */
-  border-radius: 0px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }

@@ -1,0 +1,62 @@
+const menu =
+    document.querySelector("#menu");
+
+menu.innerHTML = `
+<header class="menu">
+
+            <div class="topo"> 
+                <div class="logo-busca">
+                    <div class="logo">
+                        <img src="/Tela Inicial/img/logocomfundobranco.png" alt="Feirinha Pai d'Egua">
+                    </div>
+
+                    <div class="cep">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Informe seu CEP" maxlength="9">
+                    </div>
+                    
+                    <form class="busca">
+                        <input type="text" placeholder="Buscar produtos,artesãos, categorias...">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+            
+                </div>
+
+               <nav class="menu-conta">
+                    <ul class="lista-conta">
+                        <li><a href="/PastaDelogincomplet/logininicio.html"><i class="fa-regular fa-user"></i> <span>Minha Conta</span></a></li>
+                        <li><a href="#"><i class="fa-regular fa-heart"></i> <span>Favoritos</span></a></li>
+                        <li><a href="/sacola/pagde_venda.html"><i class="fa-solid fa-bag-shopping"></i> <span>Sacola</span></a></li>
+                    </ul>
+                </nav>
+            </div>    
+
+            <nav class="nav-menu">
+                <div class="categoria">
+                    <button class="botao-categoria">☰ Categorias</button>
+                    <ul class="lista-categorias">
+                        
+                        <li><a href="#">Novidades <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Cerâmica Marajoara <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Cestaria <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Arte em Miriti <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Biojoias <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Escultura em Madeira <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Tecidos e Bordados <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Decoração <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                        <li><a href="#">Acessórios <span><i class="fa-solid fa-greater-than"></i></span></a></li>
+                    </ul>
+                </div>
+
+                <ul class="lista-menu">
+                    <li><a href="/Tela Inicial/pagina_inicial.html">Início</a></li>
+                    <li><a href="/Produtos Loja/Todos_os_Produtos.html">Produtos</a></li>
+                    <li><a href="/História do Artesão/html/historiaartesao.html">Artesãos</a></li>
+                    <li><a href="/Sobre Nós/html/sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+`;   
+   

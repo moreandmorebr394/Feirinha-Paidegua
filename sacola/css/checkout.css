@@ -4,7 +4,7 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: #F7EDE3; /*#E6D3CB;*/                    /* Fundo rosa/terroso da página */
   color: #333333;

@@ -35,6 +35,17 @@ a {
     color: var(--verde-escuro);
 }
 
+.portal_container {
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
 .menu {
     grid-area: header;
     display: flex;

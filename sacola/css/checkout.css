@@ -364,7 +364,7 @@ h2 {
 }
 
 .btn-fazer-pedido {
-  background-color: #D94336;
+  background-color: #0E4612;
   color: #FFFFFF;
   border: none;
   padding: 12px 28px;
@@ -376,7 +376,7 @@ h2 {
 }
 
 .btn-fazer-pedido:hover {
-  background-color: #B83327;
+  background-color: #1B5E20;
 }
 
 /* ==========================================================
@@ -543,7 +543,7 @@ h2 {
 
 .sugestao-btn {
   width: 100%;
-  background-color: #D94336;
+  background-color: #0E4612;
   color: #FFFFFF;
   border: none;
   padding: 6px 0;
@@ -554,5 +554,5 @@ h2 {
 }
 
 .sugestao-btn:hover {
-  background-color: #B83327;
+  background-color: #1B5E20;
 }

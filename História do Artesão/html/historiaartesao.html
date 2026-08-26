@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artesãos - Feirinha Pai d'Égua</title>
-    <!-- Fontes do Google Fonts -->
+    <title>Feirinha Pai d'Égua - Mestre Pedro Costa</title>
+    <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/História do Artesão/css/historiaartesao.css">
+    <link rel="stylesheet" href="/Página Artesões/css/paginaartesao.css">
 </head>
 <body>
 
@@ -20,12 +20,12 @@
             <div class="container top-bar-container">
                 <!-- LOGO PAI D'ÉGUA -->
                 <a href="#" class="brand-logo" aria-label="Feirinha Pai d'Égua - Página Inicial">
-                    <img src="/Artesões/img/logocomfundobranco.png" alt="Logo Feirinha Pai d'Égua - O artesanato paraense na palma de sua mão" class="logo-img">
+                    <img src="/Página Artesões/img/logocomfundobranco.png" alt="Logo Feirinha Pai d'Égua - O artesanato paraense na palma de sua mão" class="logo-img">
                 </a>
 
                 <!-- BARRA DE BUSCA -->
                 <div class="search-box">
-                    <input type="text" placeholder="Buscar artesãos, peças, cidades..." aria-label="Buscar artesãos e produtos">
+                    <input type="text" placeholder="Buscar peças, artesãos, técnicas marajoaras..." aria-label="Buscar artesãos e produtos">
                     <button type="button" aria-label="Pesquisar">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- NAVEGAÇÃO SECUNDÁRIA -->
-        <nav class="nav-bar">
+            <nav class="nav-bar">
             <div class="container nav-container">
                 
                 <!-- MENU DROPDOWN CATEGORIAS -->
@@ -75,104 +75,165 @@
                         <li><a href="#">Acessórios <span>&gt;</span></a></li>
                     </ul>
                 </div>
-        <ul class="nav-links">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#" class="active">Artesãos</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </div>
-</nav>
+                <ul class="nav-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#" class="active">Artesãos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <!-- BREADCRUMB / GUIA DE NAVEGAÇÃO -->
+    <!-- BANNER DE DESTAQUE DA FEIRINHA -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <img src="/Página Artesões/img/84ac8aaa640ef2275444dd0d15cad9300f281f44.jpg" alt="Acervo de cerâmica artesanal paraense com gravações de Belém Pará" class="banner-img">
+                <div class="banner-overlay">
+                    <span class="banner-tag"><i class="fa-solid fa-location-dot"></i> Soure & Belém • Pará</span>
+                    <h1>Mestres da Arte Amazônica</h1>
+                    <p>Peças únicas feitas à mão, conectando a ancestralidade do barro com a sua casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB / NAVEGAÇÃO GUIA -->
     <div class="breadcrumb-bar">
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="#">Início</a></li>
                 <li><i class="fa-solid fa-chevron-right"></i></li>
-                <li class="current">Mestres Artesãos</li>
+                <li><a href="#">Artesãos</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="current">Pedro Costa</li>
             </ul>
         </div>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL: VITRINE DE ARTESÃOS -->
+    <!-- CONTEÚDO PRINCIPAL: PERFIL DO ARTESÃO -->
     <main class="main-content">
         <div class="container">
-            
-            <header class="artisan-page-header">
-                <span class="sub-tag">Mãos que Moldam a Nossa História</span>
-                <h2>Nossos Mestres e Artesãos</h2>
-                <p>Conheça os talentos paraenses que transformam barro, madeira e palha em pura arte com identidade.</p>
-                <div class="divider-line"></div>
-            </header>
-
-            <!-- GRID EM 2 COLUNAS (MESMA ESTRUTURA DA PRIMEIRA IMAGEM) -->
-            <div class="artisan-showcase-grid">
-
-                <!-- 1. MARIA DAS DORES -->
-                <article class="artisan-card">
-                    <div class="artisan-img-box">
-                        <img src="/História do Artesão/img/images3.jpg" alt="Maria Das Dores exibindo peça artesanal em folha de madeira em seu estande">
-                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Barcarena / PA</span>
+            <div class="profile-grid">
+                
+                <!-- COLUNA ESQUERDA: PERFIL E BIOGRAFIA -->
+                <div class="col-left">
+                    <header class="artisan-header">
+                        <span class="artisan-badge"><i class="fa-solid fa-certificate"></i> Mestre Artesão</span>
+                        <h1 class="artisan-name">Pedro Costa</h1>
+                        <p class="artisan-location"><i class="fa-solid fa-earth-americas"></i> Soure, Ilha do Marajó — Pará</p>
+                    </header>
+                    
+                    <div class="artisan-portrait-card">
+                        <img src="/Página Artesões/img/c3d62ff2a68e9236c4b689f22292c17c762a9827.jpg" alt="Mestre Pedro Costa segurando vaso de cerâmica artesanal com grafismos tradicionais">
+                        <div class="portrait-caption">
+                            <span>Mestre Pedro Costa em seu ateliê segurando vaso com grafismos rituais marajoaras</span>
+                        </div>
                     </div>
-                    <div class="artisan-card-body">
-                        <h3 class="artisan-title-styled">Maria Das Dores</h3>
-                        <p class="artisan-desc">
-                            Artesã de Barcarena, cria peças exclusivas de decoração combinando madeira entalhada, fibras regionais e bijuterias finas.
+
+                    <article class="bio-section">
+                        <h2 class="section-heading">
+                            <span class="icon-accent"><i class="fa-solid fa-fire-burner"></i></span>
+                            Cerâmica e Ancestralidade
+                        </h2>
+
+                        <div class="bio-body">
+                            <h3><i class="fa-solid fa-hands-holding-circle"></i> Herança e Barro: A Arte que Vem do Chão</h3>
+                            <p>
+                                Moldado pela tradição secular de <strong>Soure, na Ilha do Marajó (PA)</strong>, Mestre Pedro Costa é um verdadeiro guardião dos saberes da nossa terra. Ele transforma a argila da Amazônia em obras vivas que contam histórias ancestrais, unindo o respeito ao tempo sagrado da natureza com a precisão dos traços e grafismos rupestres locais.
+                            </p>
+                            <p>
+                                Cada peça que brota de suas mãos é estritamente única, moldada com pigmentos naturais e queimada em processos tradicionais que carregam o calor, a identidade e a alma do povo paraense.
+                            </p>
+                        </div>
+
+                        <div class="badges-row">
+                            <div class="badge-item">
+                                <i class="fa-solid fa-leaf"></i>
+                                <span>Matéria-Prima Sustentável</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>Grafismos Originais</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fa-solid fa-ribbon"></i>
+                                <span>Selo de Origem Pará</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- COLUNA DIREITA: CITAÇÃO & GALERIA DE OBRAS -->
+                <div class="col-right">
+                    
+                    <!-- CITAÇÃO DESTACADA -->
+                    <blockquote class="quote-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text">
+                            “Moldando a história e o barro do Pará em peças únicas de cerâmica ancestral.”
                         </p>
-                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                        <cite class="quote-author">— Pedro Costa</cite>
+                    </blockquote>
 
-                <!-- 2. FERNANDA SILVA -->
-                <article class="artisan-card">
-                    <div class="artisan-img-box">
-                        <img src="/História do Artesão/img/images.jpg" alt="Fernanda Silva com remo ornamentado em homenagem ao Círio de Nazaré">
-                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Belém / PA</span>
-                    </div>
-                    <div class="artisan-card-body">
-                        <h3 class="artisan-title-styled">Fernanda Silva</h3>
-                        <p class="artisan-desc">
-                            Seu foco é a rica cultura ribeirinha, criando remos decorados e artigos de fé com ornamentos e mandalas inspirados no Círio de Nazaré.
-                        </p>
-                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                    <!-- GALERIA DAS OBRAS DO MESTRE -->
+                    <section class="artworks-section">
+                        <div class="section-subheading">
+                            <h3>Obras em Destaque</h3>
+                            <p>Conheça a coleção de peças feitas à mão pelo artista</p>
+                        </div>
 
-                <!-- 3. LINA DA CONCEIÇÃO -->
-                <article class="artisan-card">
-                    <div class="artisan-img-box">
-                        <img src="/História do Artesão/img/images1.jpg" alt="Lina da Conceição segurando trançados artesanais em palha de Santarém">
-                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Santarém / PA</span>
-                    </div>
-                    <div class="artisan-card-body">
-                        <h3 class="artisan-title-styled">Lina da Conceição</h3>
-                        <p class="artisan-desc">
-                            Artesã de Santarém, desenvolve cestarias e fruteiras tecidas em palha natural, unindo utilidade com o resgate do design paraense.
-                        </p>
-                        <a href="#" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                        <div class="artworks-grid">
+                            <figure class="artwork-card">
+                                <div class="artwork-img-wrapper">
+                                    <img src="/Página Artesões/img/6042e3fea5a9f7e762f6c3e725ceded50287dfc9.jpg" alt="Vaso de cerâmica marajoara com incisões numéricas e grafismos geométrica ancestral">
+                                    <button class="btn-quick-view" title="Ver detalhes"><i class="fa-solid fa-eye"></i> Ampliar</button>
+                                </div>
+                                <figcaption class="artwork-details">
+                                    <span class="artwork-category">Vaso Ritualístico</span>
+                                    <h4>Vaso Ancestral Grafado</h4>
+                                    <p class="artwork-desc">Incisões geométricas feitas à mão sobre cerâmica marajoara.</p>
+                                    <div class="artwork-footer">
+                                        <span class="artwork-status"><i class="fa-solid fa-check"></i> Peça Única</span>
+                                        <a href="#" class="btn-inquire">Visite Nossa Loja</a>
+                                    </div>
+                                </figcaption>
+                            </figure>
 
-                <!-- 4. PEDRO COSTA -->
-                <article class="artisan-card">
-                    <div class="artisan-img-box">
-                        <img src="/História do Artesão/img/c3d62ff2a68e9236c4b689f22292c17c762a9827.jpg" alt="Pedro Costa segurando vaso de cerâmica marajoara em seu ateliê">
-                        <span class="origin-badge"><i class="fa-solid fa-location-dot"></i> Soure, Marajó / PA</span>
+                            <figure class="artwork-card">
+                                <div class="artwork-img-wrapper">
+                                    <img src="/Página Artesões/img/8d27a56c8337633392fbfa10e09c10cecda98c24.jpg" alt="Conjunto de jarra e copos artesanais de cerâmica com relevo marajoara">
+                                    <button class="btn-quick-view" title="Ver detalhes"><i class="fa-solid fa-eye"></i> Ampliar</button>
+                                </div>
+                                <figcaption class="artwork-details">
+                                    <span class="artwork-category">Utensílios de Mão</span>
+                                    <h4>Conjunto de Cerâmica Marajoara</h4>
+                                    <p class="artwork-desc">Jarra e copos artesanais com relevos e acabamento orgânico.</p>
+                                    <div class="artwork-footer">
+                                        <span class="artwork-status"><i class="fa-solid fa-check"></i> Sob Encomenda</span>
+                                        <a href="#" class="btn-inquire">Visite Nossa Loja</a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- CARD DE CONTATO DIRETO COM O ARTESÃO -->
+                    <div class="artisan-cta-card">
+                        <div class="cta-content">
+                            <h3>Deseja encomendar uma peça sob medida?</h3>
+                            <p>Adquira diretamente do artesão e apoie a valorização da cultura viva do Pará.</p>
+                        </div>
+                        <a href="https://wa.me/5591900000000" target="_blank" class="btn-cta-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Falar com o Artesão
+                        </a>
                     </div>
-                    <div class="artisan-card-body">
-                        <h3 class="artisan-title-styled">Pedro Costa</h3>
-                        <p class="artisan-desc">
-                            Mestre nos jarros do Marajó, modela peças únicas de cerâmica ancestral perfeitas para a ornamentação e elegância da sua casa.
-                        </p>
-                        <a href="/Página Artesões/html/paginaartesao.html" class="btn-artisan-profile">Conhecer Obras <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+
+                </div>
 
             </div>
-
         </div>
     </main>
 
@@ -180,7 +241,7 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <img src="/História do Artesão/img/logocomfundobranco.png" alt="Logo Feirinha Pai d'Égua" class="footer-logo">
+                <img src="/Página Artesões/img/logocomfundobranco.png" alt="Logo Feirinha Pai d'Égua" class="footer-logo">
                 <p>Valorizando a arte, a cultura e a identidade paraense através das mãos dos nossos mestres artesãos.</p>
             </div>
             <div class="footer-col links-col">
@@ -212,3 +273,4 @@
 
 </body>
 </html>
+

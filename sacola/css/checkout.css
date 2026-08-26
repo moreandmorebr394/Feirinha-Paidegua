@@ -17,8 +17,8 @@ body {
    2. CONTAINER PRINCIPAL
    ========================================================== */
 .checkout-container {
-  max-width: 60%;
-  width: 60%;
+  max-width: 90%;
+  width: 99%;
   margin: 0 auto;
   background-color: #FBF4EA;                       /* Cream de fundo dos blocos */
   border-radius: 12px;
@@ -474,7 +474,7 @@ h2 {
 /* Sobrescreve o btn-fazer-pedido só dentro do footer-final da Sacola */
 .footer-final .btn-fazer-pedido {
   width: 60%;
-  margin-left: 150px;
+  margin-left: 220px;
   padding: 14px 0;
   font-size: 14px;
   border-radius: 10px;

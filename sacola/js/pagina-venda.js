@@ -212,12 +212,24 @@ document.addEventListener("DOMContentLoaded", () => {
      8. BOTÕES "ADICIONAR" DA SEÇÃO DE SUGESTÕES
      ------------------------------------------------------ */
   document.querySelectorAll(".sugestao-btn").forEach((botao) => {
-    botao.addEventListener("click", () => {
+  const textoOriginal = botao.textContent; // guarda o texto original (ex: "Adicionar")
+
+  botao.addEventListener("click", () => {
+    const jaAdicionado = botao.classList.contains("adicionado");
+
+    if (jaAdicionado) {
+      // DESCLIQUE: volta ao estado original
+      botao.textContent = textoOriginal;
+      botao.classList.remove("adicionado");
+      botao.style.backgroundColor = ""; // volta pra cor padrão do CSS
+    } else {
+      // CLIQUE: adiciona
       botao.textContent = "Adicionado ✓";
-      botao.disabled = true;
+      botao.classList.add("adicionado");
       botao.style.backgroundColor = "#2E7D32";
-    });
+    }
   });
+});
 
   /* ------------------------------------------------------
      9. INICIALIZAÇÃO

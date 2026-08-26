@@ -2,7 +2,7 @@
 
 let cupomDesconto = 0;
 
-// Pega todos os produtos da página
+//  produtos da página
 let produtos = document.querySelectorAll(".linha-produto, .item-produto");
 
 // Botões de aumentar e diminuir quantidade
@@ -33,7 +33,7 @@ for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("change", calcularTotal);
 }
 
-// Calcula e atualiza o total da sacola
+// Calcula total da sacola
 function calcularTotal() {
   let total = 0;
 
@@ -71,5 +71,5 @@ if (btnFinalizar) {
   });
 }
 
-// Calcula o total assim que a página carrega
+
 calcularTotal();

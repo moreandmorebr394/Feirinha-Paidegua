@@ -36,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
      ------------------------------------------------------ */
   const itens = document.querySelectorAll(".linha-produto, .item-produto");
 
-  // Guarda o preço unitário de cada item (lido do próprio HTML) pra não
-  // precisar mexer no markup adicionando data-preco em cada produto
   itens.forEach((item) => {
     const precoEl = item.querySelector(".preco-produto");
     if (precoEl) {
@@ -132,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ------------------------------------------------------
-     6. CUPOM DE DESCONTO ( #cupom-desconto da sacola)
+     6. CUPOM DE DESCONTO 
      ------------------------------------------------------ */
   const inputCupom = document.getElementById("cupom-desconto");
   const msgDesconto = document.querySelector(".msg-desconto");

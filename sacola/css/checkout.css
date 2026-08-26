@@ -498,6 +498,7 @@ h2 {
 }
 
 .sugestao-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -505,6 +506,10 @@ h2 {
   background-color: #F3E9DA;
   border-radius: 10px;
   padding: 15px 10px;
+}
+.sugestao-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .sugestao-imagem {

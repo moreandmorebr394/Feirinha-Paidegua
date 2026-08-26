@@ -234,3 +234,290 @@ a {
     font-size: 10px;
     margin-left: 40px;
 }
+
+/* Tablet - até 1024px */
+@media (max-width: 1024px) {
+    .topo {
+        gap: 20px;
+    }
+    
+    .logo img {
+        max-height: 160px;
+    }
+    
+    .busca {
+        max-width: 400px;
+    }
+    
+    .lista-menu {
+        gap: 15px;
+    }
+    
+    .lista-menu a {
+        font-size: 16px;
+    }
+}
+
+/* Mobile grande - até 768px */
+@media (max-width: 768px) {
+    .nav-menu { 
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .topo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+     .logo-busca {
+        display: contents;
+    }
+
+    .logo img { 
+        height: 85px;
+        width: auto;
+        max-width: 130px;
+    }
+
+    .cep {
+        order: 4;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cep input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .lista-conta {
+        justify-content: flex-start;
+        width: fit-content;
+    }
+
+    .lista-menu {
+        flex: none;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .lista-menu a {
+        font-size: 14px;
+    }
+
+    .busca {
+        order: 3;
+        width: 100%;
+        max-width: none;
+    }
+
+    .busca input {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .busca button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .categoria { 
+        margin: 0;
+        width: auto;
+        padding: var(--espacamento) var(--espacamento) 0 0 ;
+    }
+
+    .botao-categoria {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .lista-categorias {
+        width: 220px;
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+/* Mobile médio - até 576px */
+@media (max-width: 576px) {
+    .menu {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        padding: 0 15px;
+    }
+    
+    .topo {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 70px;
+        max-width: 110px;
+    }
+    
+    .cep {
+        padding: 8px 12px;
+    }
+    
+    .cep i {
+        font-size: 14px;
+    }
+    
+    .cep input {
+        font-size: 13px;
+    }
+    
+    .lista-conta {
+        gap: 10px;
+    }
+    
+    .lista-conta a {
+        font-size: 13px;
+    }
+    
+    .lista-conta i {
+        font-size: 18px;
+    }
+    
+    .lista-menu {
+        gap: 8px;
+    }
+    
+    .lista-menu a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    
+    .busca input {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .busca button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .categoria {
+        padding: 15px 15px 0 0;
+    }
+    
+    .botao-categoria {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .lista-categorias {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .lista-categorias li a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile pequeno - até 480px */
+@media (max-width: 480px) {
+    .menu {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .nav-menu {
+        padding: 0 12px;
+        border-radius: 8px;
+    }
+    
+    .topo {
+        gap: 8px;
+    }
+    
+    .logo img {
+        height: 65px;
+        max-width: 95px;
+    }
+    
+    .cep {
+        padding: 6px 10px;
+        gap: 6px;
+    }
+    
+    .cep i {
+        font-size: 13px;
+    }
+    
+    .cep input {
+        font-size: 13px;
+    }
+    
+    .lista-conta {
+        gap: 8px;
+    }
+    
+    .lista-conta a {
+        font-size: 13px;
+        gap: 4px;
+    }
+    
+    .lista-conta i {
+        font-size: 20px;
+    }
+    
+    .lista-menu {
+        gap: 6px;
+    }
+    
+    .lista-menu a {
+        font-size: 13px;
+        padding: 3px 6px;
+    }
+    
+    .busca input {
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: var(--borda) 0 0 var(--borda);
+    }
+    
+    .busca button {
+        padding: 8px 10px;
+        font-size: 13px;
+        border-radius: 0 var(--borda) var(--borda) 0;
+    }
+    
+    .categoria {
+        padding: 12px 12px 0 0;
+    }
+    
+    .botao-categoria {
+        padding: 8px 14px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+    
+    .lista-categorias {
+        max-width: 180px;
+        border-radius: 8px;
+    }
+    
+    .lista-categorias li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .lista-categorias i {
+        margin-left: 20px;
+        font-size: 9px;
+    }
+}
